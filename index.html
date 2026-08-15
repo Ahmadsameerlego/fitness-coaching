@@ -1,0 +1,1489 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>آدم رحمن | مدرب الأداء والتطوير البدني أونلاين</title>
+  <meta name="description" content="تدريب شخصي أونلاين، استراتيجية تغذية مخصصة، ومتابعة نخبوبة مع المدرب آدم رحمن. ابني جسمك. وارتقِ بحياتك." />
+
+  <!-- Google Fonts (Cairo for Arabic, Syne & Plus Jakarta Sans for English) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#070709',
+              surface: '#0f0f13',
+              card: '#16161c',
+              accent: '#d4ff00',
+              accentHover: '#bce600',
+              muted: '#8e8e99'
+            }
+          },
+          fontFamily: {
+            display: ['Cairo', 'Syne', 'sans-serif'],
+            body: ['Cairo', 'Plus Jakarta Sans', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Design System Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-[#070709] text-neutral-100 font-body selection:bg-brand-accent selection:text-black antialiased relative">
+
+  <!-- Desktop Custom Cursor -->
+  <div id="custom-cursor"></div>
+  <div id="custom-cursor-dot"></div>
+
+  <!-- NAVIGATION BAR -->
+  <nav id="main-nav" class="fixed top-0 left-0 w-full z-50 glass-nav transition-all duration-300 py-5">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="group flex flex-col">
+        <span class="font-display font-extrabold tracking-tight text-xl md:text-2xl text-white group-hover:text-brand-accent transition-colors">
+          آدم رحمن
+        </span>
+        <span data-i18n="nav_logo_sub" class="text-[10px] uppercase tracking-widest text-neutral-400 font-semibold -mt-1">
+          مدرب أداء وتطوير بدني
+        </span>
+      </a>
+
+      <!-- Desktop Links -->
+      <div class="hidden lg:flex items-center gap-8 text-xs font-semibold uppercase tracking-wider text-neutral-300">
+        <a href="#hero" data-i18n="nav_home" class="desktop-nav-link hover:text-brand-accent transition-colors py-1 hover-line">الرئيسية</a>
+        <a href="#about" data-i18n="nav_about" class="desktop-nav-link hover:text-brand-accent transition-colors py-1 hover-line">عن آدم</a>
+        <a href="#programs" data-i18n="nav_coaching" class="desktop-nav-link hover:text-brand-accent transition-colors py-1 hover-line">البرامج</a>
+        <a href="#results" data-i18n="nav_results" class="desktop-nav-link hover:text-brand-accent transition-colors py-1 hover-line">النتائج</a>
+        <a href="#method" data-i18n="nav_method" class="desktop-nav-link hover:text-brand-accent transition-colors py-1 hover-line">المنهج</a>
+        <a href="#testimonials" data-i18n="nav_testimonials" class="desktop-nav-link hover:text-brand-accent transition-colors py-1 hover-line">آراء العملاء</a>
+      </div>
+
+      <!-- Right Action CTA & Language Toggle -->
+      <div class="hidden md:flex items-center gap-4">
+        <!-- Language Switcher Button -->
+        <button class="lang-toggle-btn lang-switch-btn">
+          <svg class="w-4 h-4 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path></svg>
+          <span data-i18n="lang_toggle">EN</span>
+        </button>
+
+        <a href="#booking" class="btn-magnetic btn-accent px-6 py-2.5 rounded-full text-xs uppercase tracking-wider font-extrabold flex items-center gap-2">
+          <span data-i18n="nav_book">احجز مكالمتك ←</span>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger & Mobile Lang Switch -->
+      <div class="flex items-center gap-3 lg:hidden">
+        <button class="lang-toggle-btn lang-switch-btn px-3 py-1">
+          <span data-i18n="lang_toggle">EN</span>
+        </button>
+
+        <button id="mobile-menu-btn" class="p-2 text-white focus:outline-none" aria-label="Toggle Navigation">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- MOBILE OVERLAY MENU -->
+  <div id="mobile-menu" class="fixed inset-0 bg-[#070709]/98 z-40 hidden flex flex-col justify-between px-8 py-24 transition-opacity duration-300">
+    <div class="flex flex-col gap-6 text-2xl font-display font-bold uppercase tracking-wider">
+      <a href="#about" data-i18n="nav_about" class="mobile-nav-link hover:text-brand-accent transition-colors">عن آدم</a>
+      <a href="#programs" data-i18n="nav_coaching" class="mobile-nav-link hover:text-brand-accent transition-colors">البرامج</a>
+      <a href="#results" data-i18n="nav_results" class="mobile-nav-link hover:text-brand-accent transition-colors">النتائج</a>
+      <a href="#method" data-i18n="nav_method" class="mobile-nav-link hover:text-brand-accent transition-colors">المنهج</a>
+      <a href="#testimonials" data-i18n="nav_testimonials" class="mobile-nav-link hover:text-brand-accent transition-colors">آراء العملاء</a>
+      <a href="#faq" data-i18n="faq_h2" class="mobile-nav-link hover:text-brand-accent transition-colors">الأسئلة الشائعة</a>
+    </div>
+
+    <div class="flex flex-col gap-4 border-t border-white/10 pt-8">
+      <a href="#booking" data-i18n="nav_book" class="mobile-nav-link w-full py-4 text-center bg-brand-accent text-black font-extrabold uppercase tracking-widest text-sm rounded-full">
+        احجز مكالمتك ←
+      </a>
+      <a href="#" class="whatsapp-trigger text-center text-xs uppercase tracking-widest text-neutral-400 hover:text-brand-accent transition-colors" data-i18n="final_cta_secondary">
+        تحدث عبر الواتساب
+      </a>
+    </div>
+  </div>
+
+
+  <!-- HERO SECTION -->
+  <section id="hero" class="relative min-h-screen flex items-center justify-center pt-28 pb-16 overflow-hidden bg-noise">
+    
+    <!-- Background Coach Image & Lighting Overlays -->
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=1600&auto=format&fit=crop" 
+        alt="Adam Rahman Performance Coach" 
+        class="w-full h-full object-cover object-center opacity-40 scale-105 filter grayscale contrast-125 brightness-90"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-[#070709] via-[#070709]/70 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-[#070709] via-[#070709]/60 to-transparent"></div>
+      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-brand-accent/10 rounded-full blur-[140px] pointer-events-none"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Asymmetrical Content -->
+      <div class="lg:col-span-8 space-y-8">
+        
+        <!-- Eyebrow Tag -->
+        <div class="reveal-init inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md">
+          <span class="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
+          <span data-i18n="hero_eyebrow" class="text-[10px] md:text-xs font-bold uppercase tracking-widest text-neutral-300">
+            تدريب أونلاين • أداء • تغذية
+          </span>
+        </div>
+
+        <!-- Huge Display Headline -->
+        <h1 class="reveal-init reveal-delay-1 font-display font-extrabold text-5xl sm:text-7xl lg:text-8xl tracking-tightest leading-[1.05] text-white">
+          <span data-i18n="hero_h1_1">ابني جسمك.</span><br />
+          <span data-i18n="hero_h1_2" class="text-brand-accent drop-shadow-[0_0_35px_rgba(212,255,0,0.3)]">وارتقِ بحياتك.</span>
+        </h1>
+
+        <!-- Supporting Copy -->
+        <p data-i18n="hero_sub" class="reveal-init reveal-delay-2 text-base sm:text-lg md:text-xl text-neutral-300 font-light leading-relaxed max-w-2xl">
+          تدريب شخصي مصمم حول جسمك، نمط حياتك وأهدافك — مع متابعة حقيقية تساعدك على تحقيق نتائج يمكنك الحفاظ عليها.
+        </p>
+
+        <!-- CTA Action Group -->
+        <div class="reveal-init reveal-delay-3 flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
+          <a href="#booking" class="btn-magnetic btn-accent px-8 py-4 rounded-full text-sm uppercase tracking-wider font-extrabold flex items-center justify-center gap-3 group">
+            <span data-i18n="hero_cta_primary">ابدأ رحلتك</span>
+            <svg class="w-5 h-5 flip-on-rtl group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </a>
+          <a href="#results" class="btn-magnetic border border-white/15 hover:border-white/40 bg-white/5 hover:bg-white/10 text-white px-8 py-4 rounded-full text-sm uppercase tracking-wider font-bold flex items-center justify-center gap-2 transition-all">
+            <span data-i18n="hero_cta_secondary">شاهد النتائج ↓</span>
+          </a>
+        </div>
+
+        <!-- Floating Proof Badges -->
+        <div class="reveal-init reveal-delay-4 pt-8 flex items-center gap-8 border-t border-white/10 text-xs uppercase tracking-widest text-neutral-400">
+          <div class="flex items-center gap-3">
+            <svg class="w-6 h-6 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+            <div>
+              <span data-i18n="hero_badge_1_num" class="block font-bold text-white text-sm">+500 عميل</span>
+              <span data-i18n="hero_badge_1_text" class="text-[10px] text-neutral-400">حققوا نتائج حقيقية</span>
+            </div>
+          </div>
+          <div class="w-px h-8 bg-white/10"></div>
+          <div class="flex items-center gap-3">
+            <svg class="w-6 h-6 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+            <div>
+              <span data-i18n="hero_badge_2_num" class="block font-bold text-white text-sm">+12 سنة</span>
+              <span data-i18n="hero_badge_2_text" class="text-[10px] text-neutral-400">خبرة تدريبية نخبوية</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Asymmetrical Graphic / Floating Badge Right -->
+      <div class="lg:col-span-4 hidden lg:flex justify-end relative">
+        <div class="glass-panel p-6 rounded-2xl max-w-xs border-white/10 space-y-4 hover:border-brand-accent/50 transition-all duration-300">
+          <div class="flex items-center gap-3">
+            <img 
+              src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?q=80&w=200&auto=format&fit=crop" 
+              alt="آدم رحمن" 
+              class="w-12 h-12 rounded-full object-cover border border-brand-accent"
+            />
+            <div>
+              <span data-i18n="hero_card_name" class="block text-sm font-bold text-white">آدم رحمن</span>
+              <span data-i18n="hero_card_role" class="text-[10px] uppercase text-brand-accent font-semibold tracking-wider">رئيس مدربي الأداء</span>
+            </div>
+          </div>
+          <p data-i18n="hero_card_quote" class="text-xs text-neutral-300 leading-relaxed font-light">
+            "أنا مش بدي الناس جدول تمرين وخلاص. أنا ببني لهم نظام يقدروا يعيشوا بيه."
+          </p>
+          <div class="flex items-center justify-between text-[11px] text-neutral-400 pt-2 border-t border-white/5">
+            <span data-i18n="hero_card_slots_label">اشتراكات أونلاين 1:1</span>
+            <span data-i18n="hero_card_slots_count" class="text-brand-accent font-bold">متبقي 3 أماكن فقط هذا الشهر</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-neutral-500 text-[10px] uppercase tracking-widest">
+      <div class="w-5 h-8 border border-neutral-700 rounded-full flex items-start justify-center p-1">
+        <div class="w-1 h-2 bg-brand-accent rounded-full animate-bounce"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SOCIAL PROOF / STATS STRIP -->
+  <section id="stats" class="py-12 border-y border-white/10 bg-[#0f0f13] relative z-20">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+        
+        <div class="reveal-init space-y-1 text-center md:text-right">
+          <div class="font-display text-4xl sm:text-5xl font-extrabold text-white tracking-tight flex items-center justify-center md:justify-start">
+            <span class="stat-counter" data-target="500" data-suffix="+">0</span>
+          </div>
+          <p data-i18n="stat_1_label" class="text-xs font-bold uppercase tracking-widest text-brand-accent">عميل حقق نتائج</p>
+          <p data-i18n="stat_1_sub" class="text-[11px] text-neutral-500">في مصر وحول العالم</p>
+        </div>
+
+        <div class="reveal-init reveal-delay-1 space-y-1 text-center md:text-right">
+          <div class="font-display text-4xl sm:text-5xl font-extrabold text-white tracking-tight flex items-center justify-center md:justify-start">
+            <span class="stat-counter" data-target="12" data-suffix="+">0</span>
+          </div>
+          <p data-i18n="stat_2_label" class="text-xs font-bold uppercase tracking-widest text-brand-accent">سنة خبرة</p>
+          <p data-i18n="stat_2_sub" class="text-[11px] text-neutral-500">أنظمة علمية مجربة</p>
+        </div>
+
+        <div class="reveal-init reveal-delay-2 space-y-1 text-center md:text-right">
+          <div class="font-display text-4xl sm:text-5xl font-extrabold text-white tracking-tight flex items-center justify-center md:justify-start">
+            <span class="stat-counter" data-target="94" data-suffix="%">0</span>
+          </div>
+          <p data-i18n="stat_3_label" class="text-xs font-bold uppercase tracking-widest text-brand-accent">نسبة استمرار العملاء</p>
+          <p data-i18n="stat_3_sub" class="text-[11px] text-neutral-500">نتائج وأسلوب حياة مستدام</p>
+        </div>
+
+        <div class="reveal-init reveal-delay-3 space-y-1 text-center md:text-right">
+          <div class="font-display text-4xl sm:text-5xl font-extrabold text-white tracking-tight flex items-center justify-center md:justify-start">
+            <span class="stat-counter" data-target="28" data-suffix="">0</span>
+          </div>
+          <p data-i18n="stat_4_label" class="text-xs font-bold uppercase tracking-widest text-brand-accent">دولة حول العالم</p>
+          <p data-i18n="stat_4_sub" class="text-[11px] text-neutral-500">متابعة أونلاين عالمية</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ABOUT / STORY SECTION -->
+  <section id="about" class="py-24 md:py-32 relative bg-[#070709] overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+        
+        <!-- Left Image Column -->
+        <div class="lg:col-span-5 reveal-init">
+          <div class="relative rounded-2xl overflow-hidden img-zoom-container border border-white/10 group">
+            <img 
+              src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?q=80&w=1200&auto=format&fit=crop" 
+              alt="Coach Adam Rahman Portrait" 
+              class="w-full h-[520px] md:h-[600px] object-cover object-top grayscale contrast-125"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#070709] via-transparent to-transparent opacity-80"></div>
+            
+            <div class="absolute bottom-6 left-6 right-6 p-6 glass-panel rounded-xl border-white/10">
+              <span class="text-[10px] font-bold uppercase tracking-widest text-brand-accent block mb-1">الرؤية</span>
+              <p class="text-xs text-neutral-200 italic font-light">"الانضباط يتفوق على الحماس المؤقت في كل مرة."</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Content Column -->
+        <div class="lg:col-span-7 space-y-8">
+          
+          <div class="reveal-init space-y-3">
+            <span data-i18n="about_eyebrow" class="text-xs font-bold uppercase tracking-widest text-brand-accent block">المدرب</span>
+            <h2 class="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-tight text-white">
+              <span data-i18n="about_h2_1">الموضوع مش مجرد إنك</span><br />
+              <span data-i18n="about_h2_2" class="text-neutral-400">تبان فورمة.</span>
+            </h2>
+          </div>
+
+          <p data-i18n="about_p1" class="reveal-init reveal-delay-1 text-base md:text-lg text-neutral-300 font-light leading-relaxed">
+            الموضوع إنك تبني جسمًا أقوى، وعادات أفضل، وانضباطًا يغيّر الطريقة التي تعيش بها حياتك. معظم النصائح الفردية بتفشل لأنها بتمشي على فورمة نظري، لكن في الحقيقة انت عندك شغل، سفر، والتزامات عائلية.
+          </p>
+
+          <p data-i18n="about_p2" class="reveal-init reveal-delay-2 text-sm md:text-base text-neutral-400 font-light leading-relaxed">
+            على مدار 12 سنة، طوّرت أنظمة تدريب وتغذية مخصصة لرجال الأعمال، التنفيذيين، والأشخاص اللي معندهمش وقت يضيعوه في تجارب عشوائية.
+          </p>
+
+          <!-- Quote Box -->
+          <div class="reveal-init reveal-delay-3 p-8 border-r-2 border-brand-accent bg-[#0f0f13] rounded-l-2xl space-y-4">
+            <p data-i18n="about_quote" class="font-display text-lg md:text-xl text-white font-semibold leading-snug">
+              "أنا مش بدي الناس جدول تمرين وخلاص. أنا ببني لهم نظام يقدروا يعيشوا بيه."
+            </p>
+            <div class="flex items-center justify-between pt-2">
+              <span data-i18n="about_sig" class="font-display text-sm font-bold text-brand-accent">— آدم رحمن</span>
+              <span class="text-[10px] uppercase tracking-widest text-neutral-400">مؤسس ومطور الأداء البدني</span>
+            </div>
+          </div>
+
+          <!-- Feature Bullets -->
+          <div class="reveal-init reveal-delay-4 grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-semibold uppercase tracking-wider text-neutral-300 pt-2">
+            <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5">
+              <svg class="w-4 h-4 text-brand-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span data-i18n="about_b1">أنظمة علمية مخصصة</span>
+            </div>
+            <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5">
+              <svg class="w-4 h-4 text-brand-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span data-i18n="about_b2">مرونة تتناسب مع نمط حياتك</span>
+            </div>
+            <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5">
+              <svg class="w-4 h-4 text-brand-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span data-i18n="about_b3">متابعة شخصية مباشرة 1:1</span>
+            </div>
+            <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5">
+              <svg class="w-4 h-4 text-brand-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span data-i18n="about_b4">نتائج مستدامة على المدى البعيد</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- COACHING PROGRAMS SECTION -->
+  <section id="programs" class="py-24 md:py-32 bg-[#0f0f13] border-t border-white/10 relative">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 space-y-16">
+      
+      <!-- Section Header -->
+      <div class="reveal-init text-center max-w-3xl mx-auto space-y-4">
+        <span data-i18n="prog_eyebrow" class="text-xs font-bold uppercase tracking-widest text-brand-accent block">أنظمة مصممة لك</span>
+        <h2 data-i18n="prog_h2" class="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-white">
+          تدريب مصمم ليك.
+        </h2>
+        <p data-i18n="prog_sub" class="text-neutral-400 text-sm sm:text-base font-light leading-relaxed">
+          مفيش خطط جاهزة. كل برنامج بيتبني حسب جسمك، جدولك، أهدافك ومستوى التزامك.
+        </p>
+      </div>
+
+      <!-- 3 Premium Programs Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+        
+        <!-- Program 1 -->
+        <div class="reveal-init glass-panel p-8 md:p-10 rounded-2xl flex flex-col justify-between space-y-8 border-white/10 hover:border-brand-accent/40 transition-all duration-300 group">
+          <div class="space-y-6">
+            <div class="flex items-center justify-between border-b border-white/10 pb-4">
+              <span data-i18n="prog1_tier" class="text-[10px] font-bold uppercase tracking-widest text-neutral-400">المستوى 01</span>
+              <span class="text-xs font-bold uppercase tracking-widest text-brand-accent">الأكثر طلباً</span>
+            </div>
+            
+            <h3 data-i18n="prog1_title" class="font-display font-bold text-2xl text-white group-hover:text-brand-accent transition-colors">
+              التدريب الشخصي أونلاين
+            </h3>
+
+            <p data-i18n="prog1_desc" class="text-xs text-neutral-400 font-light leading-relaxed">
+              للأشخاص الذين يريدون أقصى درجات التخصيص والمتابعة المباشرة لنتائج سريعة ومستدامة.
+            </p>
+
+            <ul class="space-y-3.5 text-xs text-neutral-300 pt-2">
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-brand-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <span data-i18n="prog1_b1">برنامج تمرين مخصص للكتلة والقوة</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-brand-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <span data-i18n="prog1_b2">استراتيجية تغذية وحساب ماكروز دقيقة</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-brand-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <span data-i18n="prog1_b3">متابعة أسبوعية بالفيديو والتقييم</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-brand-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <span data-i18n="prog1_b4">تواصل مباشر مع المدرب عبر الواتساب</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-brand-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <span data-i18n="prog1_b5">مراجعة التكنيك والأداء الرياضي</span>
+              </li>
+            </ul>
+          </div>
+
+          <a href="#booking" data-i18n="prog1_cta" class="btn-magnetic w-full py-4 bg-white/5 hover:bg-brand-accent hover:text-black border border-white/10 hover:border-brand-accent rounded-xl text-xs font-extrabold uppercase tracking-widest text-center transition-all duration-300">
+            قدّم الآن
+          </a>
+        </div>
+
+        <!-- Program 2 (Featured / Highlighted) -->
+        <div class="reveal-init reveal-delay-1 glass-panel p-8 md:p-10 rounded-2xl flex flex-col justify-between space-y-8 border-brand-accent/60 bg-[#16161c] relative glow-effect group">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-brand-accent text-black text-[10px] font-extrabold uppercase tracking-widest rounded-full">
+            12 أسبوعاً
+          </div>
+
+          <div class="space-y-6 pt-2">
+            <div class="flex items-center justify-between border-b border-white/10 pb-4">
+              <span data-i18n="prog2_tier" class="text-[10px] font-bold uppercase tracking-widest text-neutral-400">المستوى 02</span>
+              <span class="text-xs font-bold uppercase tracking-widest text-brand-accent">تحول شامل</span>
+            </div>
+
+            <h3 data-i18n="prog2_title" class="font-display font-bold text-2xl text-white group-hover:text-brand-accent transition-colors">
+              برنامج التحول
+            </h3>
+
+            <p data-i18n="prog2_desc" class="text-xs text-neutral-400 font-light leading-relaxed">
+              برنامج متكامل لمدة 12 أسبوعًا لإعادة تشكيل الجسم وخسارة الدهون مع الحفاظ على الكتلة العضلية.
+            </p>
+
+            <ul class="space-y-3.5 text-xs text-neutral-300 pt-2">
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-brand-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <span data-i18n="prog2_b1">مراحـل تدريبية مقسمة لـ 12 أسبوعًا</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-brand-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <span data-i18n="prog2_b2">استراتيجية تغذية ومكملات دقيقة</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-brand-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <span data-i18n="prog2_b3">متابعة ومحاسبة أسبوعية دقيقة</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-brand-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <span data-i18n="prog2_b4">تحسين الكارديو واللياقة البدنية</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-brand-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <span data-i18n="prog2_b5">دخول فوري لمكتبة التحول</span>
+              </li>
+            </ul>
+          </div>
+
+          <a href="#booking" data-i18n="prog2_cta" class="btn-magnetic btn-accent w-full py-4 rounded-xl text-xs font-extrabold uppercase tracking-widest text-center">
+            اعرف المزيد
+          </a>
+        </div>
+
+        <!-- Program 3 -->
+        <div class="reveal-init reveal-delay-2 glass-panel p-8 md:p-10 rounded-2xl flex flex-col justify-between space-y-8 border-white/10 hover:border-brand-accent/40 transition-all duration-300 group">
+          <div class="space-y-6">
+            <div class="flex items-center justify-between border-b border-white/10 pb-4">
+              <span data-i18n="prog3_tier" class="text-[10px] font-bold uppercase tracking-widest text-neutral-400">المستوى 03</span>
+              <span class="text-xs font-bold uppercase tracking-widest text-brand-accent">VIP النخبوي</span>
+            </div>
+
+            <h3 data-i18n="prog3_title" class="font-display font-bold text-2xl text-white group-hover:text-brand-accent transition-colors">
+              التدريب النخبوي
+            </h3>
+
+            <p data-i18n="prog3_desc" class="text-xs text-neutral-400 font-light leading-relaxed">
+              لرجال الأعمال والتنفيذيين وكبار الشخصيات الذين يحتاجون متابعة وأولوية تواصل 24/7.
+            </p>
+
+            <ul class="space-y-3.5 text-xs text-neutral-300 pt-2">
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-brand-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <span data-i18n="prog3_b1">بروتوكول كامل مخصص للمقامات والسفر</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-brand-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <span data-i18n="prog3_b2">أولوية تواصل 24/7 عبر الواتساب</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-brand-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <span data-i18n="prog3_b3">مكالمات أسبوعية لتطوير الأداء والصحة</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-brand-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <span data-i18n="prog3_b4">أدلة التغذية في المطاعم والسفر</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-brand-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <span data-i18n="prog3_b5">إدارة النوم والتحكم في الإجهاد</span>
+              </li>
+            </ul>
+          </div>
+
+          <a href="#booking" data-i18n="prog3_cta" class="btn-magnetic w-full py-4 bg-white/5 hover:bg-brand-accent hover:text-black border border-white/10 hover:border-brand-accent rounded-xl text-xs font-extrabold uppercase tracking-widest text-center transition-all duration-300">
+            قدّم على التدريب النخبوي
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- RESULTS & TRANSFORMATIONS GALLERY -->
+  <section id="results" class="py-24 md:py-32 bg-[#070709] relative">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 space-y-12">
+      
+      <!-- Section Header -->
+      <div class="reveal-init flex flex-col lg:flex-row lg:items-end justify-between gap-8">
+        <div class="space-y-3">
+          <span data-i18n="res_eyebrow" class="text-xs font-bold uppercase tracking-widest text-brand-accent block">النتائج الحقيقية</span>
+          <h2 data-i18n="res_h2" class="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-white">
+            النتائج هي الدليل.
+          </h2>
+        </div>
+
+        <!-- Filter Category Tabs -->
+        <div class="flex flex-wrap gap-2 text-xs uppercase tracking-wider font-semibold">
+          <button data-i18n="res_filter_all" class="transform-filter-btn px-5 py-2.5 rounded-full bg-brand-accent text-black font-bold transition-all" data-filter="all">الكل</button>
+          <button data-i18n="res_filter_fatloss" class="transform-filter-btn px-5 py-2.5 rounded-full bg-neutral-900 text-neutral-400 border border-neutral-800 hover:text-white transition-all" data-filter="fatloss">خسارة الدهون</button>
+          <button data-i18n="res_filter_muscle" class="transform-filter-btn px-5 py-2.5 rounded-full bg-neutral-900 text-neutral-400 border border-neutral-800 hover:text-white transition-all" data-filter="muscle">بناء العضلات</button>
+          <button data-i18n="res_filter_recomp" class="transform-filter-btn px-5 py-2.5 rounded-full bg-neutral-900 text-neutral-400 border border-neutral-800 hover:text-white transition-all" data-filter="recomp">إعادة التشكيل</button>
+        </div>
+      </div>
+
+      <!-- 6 Transformation Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Card 1 -->
+        <div class="transformation-card reveal-init img-zoom-container rounded-2xl overflow-hidden border border-white/10 bg-[#0f0f13] cursor-pointer group" 
+          data-category="fatloss" 
+          data-name="Marcus" data-name-ar="أحمد" 
+          data-goal="Fat Loss" data-goal-ar="خسارة الدهون" 
+          data-result="-18 KG Fat Loss" data-result-ar="-15 كجم خسارة دهون" 
+          data-duration="16 Weeks" data-duration-ar="16 أسبوعًا" 
+          data-quote="Adam completely transformed my body composition while fitting into my hectic travel schedule."
+          data-quote-ar="آدم غيّر شكل جسمي تماماً وقدر يدخل النظام جوه جدول سفري وضغط شغلي الصعب.">
+          
+          <div class="relative h-[380px]">
+            <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=800&auto=format&fit=crop" alt="أحمد - تحول خسارة الدهون" class="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#070709] via-transparent to-transparent opacity-90"></div>
+            
+            <div class="absolute top-4 left-4 px-3 py-1 bg-brand-accent text-black text-[10px] font-extrabold uppercase tracking-widest rounded-full">
+              -15 كجم
+            </div>
+
+            <div class="absolute bottom-6 left-6 right-6 space-y-1">
+              <span class="text-[10px] uppercase font-bold tracking-widest text-brand-accent">نظام خسارة الدهون</span>
+              <h3 class="font-display font-bold text-xl text-white">أحمد</h3>
+              <p class="text-xs text-neutral-400">16 أسبوعًا • مدير تنفيذي</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="transformation-card reveal-init reveal-delay-1 img-zoom-container rounded-2xl overflow-hidden border border-white/10 bg-[#0f0f13] cursor-pointer group" 
+          data-category="muscle" 
+          data-name="Youssef" data-name-ar="يوسف" 
+          data-goal="Muscle Gain" data-goal-ar="بناء العضلات" 
+          data-result="+6 KG Lean Muscle" data-result-ar="+6 كجم عضل صافي" 
+          data-duration="12 Weeks" data-duration-ar="12 أسبوعًا" 
+          data-quote="I gained 6kg of pure muscle without picking up excess fat. The structure was unbelievable."
+          data-quote-ar="زدت 6 كيلو عضل صافي بدون ما أزيد دهون. المتابعة والنظام كانوا على أعلى مستوى.">
+          
+          <div class="relative h-[380px]">
+            <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=800&auto=format&fit=crop" alt="يوسف - تحول بناء العضلات" class="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#070709] via-transparent to-transparent opacity-90"></div>
+            
+            <div class="absolute top-4 left-4 px-3 py-1 bg-brand-accent text-black text-[10px] font-extrabold uppercase tracking-widest rounded-full">
+              +6 كجم عضل
+            </div>
+
+            <div class="absolute bottom-6 left-6 right-6 space-y-1">
+              <span class="text-[10px] uppercase font-bold tracking-widest text-brand-accent">نظام التضخيم الصافي</span>
+              <h3 class="font-display font-bold text-xl text-white">يوسف</h3>
+              <p class="text-xs text-neutral-400">12 أسبوعًا • مهندس برمجيات</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="transformation-card reveal-init reveal-delay-2 img-zoom-container rounded-2xl overflow-hidden border border-white/10 bg-[#0f0f13] cursor-pointer group" 
+          data-category="recomp" 
+          data-name="Omar" data-name-ar="عمر" 
+          data-goal="Recomposition" data-goal-ar="إعادة تشكيل الجسم" 
+          data-result="-14 KG Fat / +4 KG Muscle" data-result-ar="-14 كجم دهون / +4 كجم عضل" 
+          data-duration="20 Weeks" data-duration-ar="20 أسبوعًا" 
+          data-quote="Adam taught me how to eat for performance. My energy levels are doubled."
+          data-quote-ar="آدم علمني إزاي آكل عشان أدائي يزيد وطاقتي تتضاعف طوال اليوم.">
+          
+          <div class="relative h-[380px]">
+            <img src="https://images.unsplash.com/photo-1534367507873-d2d7e24c797f?q=80&w=800&auto=format&fit=crop" alt="عمر - تحول إعادة التشكيل" class="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#070709] via-transparent to-transparent opacity-90"></div>
+            
+            <div class="absolute top-4 left-4 px-3 py-1 bg-brand-accent text-black text-[10px] font-extrabold uppercase tracking-widest rounded-full">
+              إعادة تشكيل
+            </div>
+
+            <div class="absolute bottom-6 left-6 right-6 space-y-1">
+              <span class="text-[10px] uppercase font-bold tracking-widest text-brand-accent">إعادة تشكيل الجسم</span>
+              <h3 class="font-display font-bold text-xl text-white">عمر</h3>
+              <p class="text-xs text-neutral-400">20 أسبوعًا • رائد أعمال</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="transformation-card reveal-init img-zoom-container rounded-2xl overflow-hidden border border-white/10 bg-[#0f0f13] cursor-pointer group" 
+          data-category="fatloss" 
+          data-name="Karim" data-name-ar="كريم" 
+          data-goal="Fat Loss & Strength" data-goal-ar="خسارة الدهون والقوة" 
+          data-result="-12 KG Fat Loss" data-result-ar="-12 كجم خسارة دهون" 
+          data-duration="14 Weeks" data-duration-ar="14 أسبوعًا" 
+          data-quote="The weekly check-ins kept me accountable every step of the way."
+          data-quote-ar="المتابعة الأسبوعية خلتني ملتزم تماماً في كل خطوة ومفيش أي حيرة.">
+          
+          <div class="relative h-[380px]">
+            <img src="https://images.unsplash.com/photo-1549476464-37392f717541?q=80&w=800&auto=format&fit=crop" alt="كريم - تحول خسارة الدهون" class="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#070709] via-transparent to-transparent opacity-90"></div>
+            
+            <div class="absolute top-4 left-4 px-3 py-1 bg-brand-accent text-black text-[10px] font-extrabold uppercase tracking-widest rounded-full">
+              -12 كجم
+            </div>
+
+            <div class="absolute bottom-6 left-6 right-6 space-y-1">
+              <span class="text-[10px] uppercase font-bold tracking-widest text-brand-accent">نظام الجسم الرشيق</span>
+              <h3 class="font-display font-bold text-xl text-white">كريم</h3>
+              <p class="text-xs text-neutral-400">14 أسبوعًا • مستثمر مالية</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="transformation-card reveal-init reveal-delay-1 img-zoom-container rounded-2xl overflow-hidden border border-white/10 bg-[#0f0f13] cursor-pointer group" 
+          data-category="muscle" 
+          data-name="Tarek" data-name-ar="طارق" 
+          data-goal="Muscle Hypertrophy" data-goal-ar="بناء الضخامة والقوة" 
+          data-result="+8 KG Muscle Mass" data-result-ar="+8 كجم كتلة عضلية" 
+          data-duration="24 Weeks" data-duration-ar="24 أسبوعًا" 
+          data-quote="I hit all-time strength PRs while improving my mobility and recovery."
+          data-quote-ar="حققت أرقام قياسية جديدة في أوزاني مع تحسن عالي جداً في الاستشفاء.">
+          
+          <div class="relative h-[380px]">
+            <img src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?q=80&w=800&auto=format&fit=crop" alt="طارق - تحول الضخامة العضلية" class="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#070709] via-transparent to-transparent opacity-90"></div>
+            
+            <div class="absolute top-4 left-4 px-3 py-1 bg-brand-accent text-black text-[10px] font-extrabold uppercase tracking-widest rounded-full">
+              +8 كجم عضل
+            </div>
+
+            <div class="absolute bottom-6 left-6 right-6 space-y-1">
+              <span class="text-[10px] uppercase font-bold tracking-widest text-brand-accent">هندسة القوة والعضلات</span>
+              <h3 class="font-display font-bold text-xl text-white">طارق</h3>
+              <p class="text-xs text-neutral-400">24 أسبوعًا • كابتن طيار</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="transformation-card reveal-init reveal-delay-2 img-zoom-container rounded-2xl overflow-hidden border border-white/10 bg-[#0f0f13] cursor-pointer group" 
+          data-category="recomp" 
+          data-name="Mostafa" data-name-ar="مصطفى" 
+          data-goal="Athletic Conditioning" data-goal-ar="نسبة دهون 10% ونشاط" 
+          data-result="10% Bodyfat Recomp" data-result-ar="10% نسبة دهون" 
+          data-duration="16 Weeks" data-duration-ar="16 أسبوعًا" 
+          data-quote="Adam's approach is pure science. No gimmicks, just relentless execution."
+          data-quote-ar="منهج آدم علمي بامتياز. بدون عشوائية أو افتكاسات، نتايج حقيقية فقط.">
+          
+          <div class="relative h-[380px]">
+            <img src="https://images.unsplash.com/photo-1507398941214-572c25f4b1dc?q=80&w=800&auto=format&fit=crop" alt="مصطفى - تحول اللياقة والنشاط" class="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#070709] via-transparent to-transparent opacity-90"></div>
+            
+            <div class="absolute top-4 left-4 px-3 py-1 bg-brand-accent text-black text-[10px] font-extrabold uppercase tracking-widest rounded-full">
+              10% دهون
+            </div>
+
+            <div class="absolute bottom-6 left-6 right-6 space-y-1">
+              <span class="text-[10px] uppercase font-bold tracking-widest text-brand-accent">اللياقة والأداء النخبوي</span>
+              <h3 class="font-display font-bold text-xl text-white">مصطفى</h3>
+              <p class="text-xs text-neutral-400">16 أسبوعًا • مدير عام</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- FEATURED CASE STUDY SECTION -->
+  <section id="case-study" class="py-24 md:py-32 bg-[#0f0f13] border-y border-white/10 relative">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Image Card -->
+        <div class="lg:col-span-6 reveal-init">
+          <div class="relative rounded-2xl overflow-hidden border border-white/10 group">
+            <img 
+              src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1200&auto=format&fit=crop" 
+              alt="تحول أحمد - دراسة حالة" 
+              class="w-full h-[450px] md:h-[550px] object-cover filter grayscale contrast-125"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#070709] via-transparent to-transparent opacity-80"></div>
+            
+            <div data-i18n="case_eyebrow" class="absolute top-6 right-6 px-4 py-1.5 bg-brand-accent text-black text-xs font-extrabold uppercase tracking-widest rounded-full">
+              قصة نجاح / 01
+            </div>
+
+            <div class="absolute bottom-6 left-6 right-6 p-6 glass-panel rounded-xl border-white/10 flex items-center justify-between">
+              <div>
+                <span data-i18n="case_before_lbl" class="text-[10px] uppercase font-bold text-neutral-400 block">قبل</span>
+                <span class="font-display font-extrabold text-2xl text-white">92 كجم</span>
+              </div>
+              <div class="text-center">
+                <span data-i18n="case_after_lbl" class="text-[10px] uppercase font-bold text-neutral-400 block">بعد</span>
+                <span class="font-display font-extrabold text-2xl text-brand-accent">77 كجم</span>
+              </div>
+              <div class="text-left">
+                <span data-i18n="case_dur_lbl" class="text-[10px] uppercase font-bold text-neutral-400 block">المدة</span>
+                <span class="font-display font-extrabold text-2xl text-white">16 أسبوعًا</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Content Case Breakdown -->
+        <div class="lg:col-span-6 space-y-8">
+          
+          <div class="reveal-init space-y-3">
+            <span data-i18n="case_eyebrow" class="text-xs font-bold uppercase tracking-widest text-brand-accent block">قصة نجاح / 01</span>
+            <h2 data-i18n="case_h2" class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight text-white">
+              تحول أحمد خلال 16 أسبوعًا
+            </h2>
+          </div>
+
+          <p data-i18n="case_desc" class="reveal-init reveal-delay-1 text-sm sm:text-base text-neutral-300 font-light leading-relaxed">
+            أحمد جرّب أنظمة غذائية مختلفة قبل كده. المشكلة لم تكن في الحماس، ولكن في عدم وجود نظام واضح يمكنه الاستمرار عليه وسط ضغوط عمله كمدير تنفيذي بأكثر من 60 ساعة عمل أسبوعيًا.
+          </p>
+
+          <!-- Key Metrics Grid -->
+          <div class="reveal-init reveal-delay-2 grid grid-cols-3 gap-4 border-y border-white/10 py-6 text-center">
+            <div>
+              <span data-i18n="case_before_lbl" class="text-[10px] uppercase tracking-widest text-neutral-400 block">قبل</span>
+              <span class="font-display text-xl sm:text-2xl font-bold text-white">92 كجم</span>
+            </div>
+            <div class="border-x border-white/10">
+              <span data-i18n="case_after_lbl" class="text-[10px] uppercase tracking-widest text-neutral-400 block">بعد</span>
+              <span class="font-display text-xl sm:text-2xl font-bold text-brand-accent">77 كجم</span>
+            </div>
+            <div>
+              <span data-i18n="case_dur_lbl" class="text-[10px] uppercase tracking-widest text-neutral-400 block">المدة</span>
+              <span class="font-display text-xl sm:text-2xl font-bold text-white">16 أسبوعًا</span>
+            </div>
+          </div>
+
+          <p class="reveal-init reveal-delay-3 text-xs sm:text-sm text-neutral-400 font-light leading-relaxed">
+            "عدلنا النظام الغذائي بمرونة عالية، وتحول تكرار تمرينه لـ 4 أيام فقط مركزة ومكثفة. نزلت نسبة الدهون من 24% إلى 11% مع زيادة طاقته اليومية."
+          </p>
+
+          <div class="reveal-init reveal-delay-4">
+            <a href="#booking" class="btn-magnetic border border-brand-accent text-brand-accent hover:bg-brand-accent hover:text-black px-8 py-3.5 rounded-full text-xs font-extrabold uppercase tracking-widest inline-flex items-center gap-3 transition-all">
+              <span data-i18n="case_cta">اقرأ قصة النجاح ←</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- METHODOLOGY SECTION -->
+  <section id="method" class="py-24 md:py-32 bg-[#070709] relative">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 space-y-16">
+      
+      <!-- Section Title -->
+      <div class="reveal-init text-center max-w-3xl mx-auto space-y-4">
+        <span data-i18n="method_eyebrow" class="text-xs font-bold uppercase tracking-widest text-brand-accent block">منظومة العمل</span>
+        <h2 data-i18n="method_h2" class="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-white">
+          المنهج
+        </h2>
+        <p data-i18n="method_sub" class="text-neutral-400 text-sm sm:text-base font-light leading-relaxed">
+          أربعة مراحل علمية مدروسة لتحقيق تحول بدني مضمون ومستدام.
+        </p>
+      </div>
+
+      <!-- 4-Step Methodology Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <!-- Step 1 -->
+        <div class="reveal-init glass-panel p-8 rounded-2xl border-white/10 space-y-6 relative hover:border-brand-accent/50 transition-all duration-300 group">
+          <span class="font-display font-extrabold text-5xl text-neutral-800 group-hover:text-brand-accent transition-colors block">01</span>
+          <div class="space-y-2">
+            <h3 data-i18n="method_s1_t" class="font-display font-bold text-xl text-white">التقييم</h3>
+            <p data-i18n="method_s1_d" class="text-xs text-neutral-400 font-light leading-relaxed">
+              نفهم جسمك، نمط حياتك وأهدافك.
+            </p>
+          </div>
+          <div class="w-8 h-1 bg-neutral-800 group-hover:bg-brand-accent transition-colors"></div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="reveal-init reveal-delay-1 glass-panel p-8 rounded-2xl border-white/10 space-y-6 relative hover:border-brand-accent/50 transition-all duration-300 group">
+          <span class="font-display font-extrabold text-5xl text-neutral-800 group-hover:text-brand-accent transition-colors block">02</span>
+          <div class="space-y-2">
+            <h3 data-i18n="method_s2_t" class="font-display font-bold text-xl text-white">البناء</h3>
+            <p data-i18n="method_s2_d" class="text-xs text-neutral-400 font-light leading-relaxed">
+              نبني استراتيجية التدريب والتغذية المناسبة لك.
+            </p>
+          </div>
+          <div class="w-8 h-1 bg-neutral-800 group-hover:bg-brand-accent transition-colors"></div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="reveal-init reveal-delay-2 glass-panel p-8 rounded-2xl border-white/10 space-y-6 relative hover:border-brand-accent/50 transition-all duration-300 group">
+          <span class="font-display font-extrabold text-5xl text-neutral-800 group-hover:text-brand-accent transition-colors block">03</span>
+          <div class="space-y-2">
+            <h3 data-i18n="method_s3_t" class="font-display font-bold text-xl text-white">التطوير</h3>
+            <p data-i18n="method_s3_d" class="text-xs text-neutral-400 font-light leading-relaxed">
+              نعدل الخطة بناءً على نتائجك الحقيقية.
+            </p>
+          </div>
+          <div class="w-8 h-1 bg-neutral-800 group-hover:bg-brand-accent transition-colors"></div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="reveal-init reveal-delay-3 glass-panel p-8 rounded-2xl border-white/10 space-y-6 relative hover:border-brand-accent/50 transition-all duration-300 group">
+          <span class="font-display font-extrabold text-5xl text-neutral-800 group-hover:text-brand-accent transition-colors block">04</span>
+          <div class="space-y-2">
+            <h3 data-i18n="method_s4_t" class="font-display font-bold text-xl text-white">التطور</h3>
+            <p data-i18n="method_s4_d" class="text-xs text-neutral-400 font-light leading-relaxed">
+              نبني عادات تستمر معك حتى بعد انتهاء البرنامج.
+            </p>
+          </div>
+          <div class="w-8 h-1 bg-neutral-800 group-hover:bg-brand-accent transition-colors"></div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- TESTIMONIALS SECTION -->
+  <section id="testimonials" class="py-24 md:py-32 bg-[#0f0f13] border-t border-white/10 relative">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 space-y-16">
+      
+      <!-- Section Header -->
+      <div class="reveal-init text-center max-w-3xl mx-auto space-y-4">
+        <span data-i18n="test_eyebrow" class="text-xs font-bold uppercase tracking-widest text-brand-accent block">آراء العملاء</span>
+        <h2 data-i18n="test_h2" class="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-white">
+          ناس حقيقية.<br />تغيير حقيقي.
+        </h2>
+      </div>
+
+      <!-- 3 Testimonials Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Testimonial 1 -->
+        <div class="reveal-init glass-panel p-8 rounded-2xl border-white/10 space-y-6 flex flex-col justify-between hover:border-brand-accent/40 transition-all">
+          <div class="space-y-4">
+            <div class="flex text-brand-accent gap-1">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p data-i18n="t1_quote" class="text-xs sm:text-sm text-neutral-300 font-light leading-relaxed italic">
+              "آدم غيّر تمامًا طريقة تفكيري في التمرين والتغذية. لأول مرة فهمت فعلًا إيه اللي يناسب جسمي من غير ما أضحي بوقتي مع عيلتي."
+            </p>
+          </div>
+
+          <div class="flex items-center gap-4 pt-4 border-t border-white/5">
+            <img 
+              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop" 
+              alt="عمر حسن" 
+              class="w-12 h-12 rounded-full object-cover border border-white/10"
+            />
+            <div>
+              <h4 data-i18n="t1_name" class="font-display font-bold text-sm text-white">عمر حسن</h4>
+              <p data-i18n="t1_role" class="text-[11px] text-neutral-400">رجل أعمال • -14 كجم</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="reveal-init reveal-delay-1 glass-panel p-8 rounded-2xl border-white/10 space-y-6 flex flex-col justify-between hover:border-brand-accent/40 transition-all">
+          <div class="space-y-4">
+            <div class="flex text-brand-accent gap-1">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p data-i18n="t2_quote" class="text-xs sm:text-sm text-neutral-300 font-light leading-relaxed italic">
+              "مستوى التفاصيل في المتابعة الأسبوعية مذهل. بيراجع فيديوهات التمرين ويبدل الماكروز حسب مستوى الإجهاد. احترافية حقيقية."
+            </p>
+          </div>
+
+          <div class="flex items-center gap-4 pt-4 border-t border-white/5">
+            <img 
+              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop" 
+              alt="خالد السيد" 
+              class="w-12 h-12 rounded-full object-cover border border-white/10"
+            />
+            <div>
+              <h4 data-i18n="t2_name" class="font-display font-bold text-sm text-white">خالد السيد</h4>
+              <p data-i18n="t2_role" class="text-[11px] text-neutral-400">مدير تنفيذي • +7 كجم عضل</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="reveal-init reveal-delay-2 glass-panel p-8 rounded-2xl border-white/10 space-y-6 flex flex-col justify-between hover:border-brand-accent/40 transition-all">
+          <div class="space-y-4">
+            <div class="flex text-brand-accent gap-1">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p data-i18n="t3_quote" class="text-xs sm:text-sm text-neutral-300 font-light leading-relaxed italic">
+              "كطبيب بساعات عمل طويلة، الأنظمة التقليدية مكنتش بتظبط معايا. آدم بنى لي نظام 4 أيام غير تمامًا من لياقتي وجسمي."
+            </p>
+          </div>
+
+          <div class="flex items-center gap-4 pt-4 border-t border-white/5">
+            <img 
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" 
+              alt="د. شريف منصور" 
+              class="w-12 h-12 rounded-full object-cover border border-white/10"
+            />
+            <div>
+              <h4 data-i18n="t3_name" class="font-display font-bold text-sm text-white">د. شريف منصور</h4>
+              <p data-i18n="t3_role" class="text-[11px] text-neutral-400">جراح عظام • إعادة تشكيل</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- INSTAGRAM / SOCIAL MEDIA GRID -->
+  <section id="social" class="py-24 md:py-32 bg-[#070709] border-t border-white/10 relative">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 space-y-12">
+      
+      <!-- Section Header -->
+      <div class="reveal-init flex flex-col sm:flex-row sm:items-end justify-between gap-6">
+        <div class="space-y-2">
+          <span data-i18n="social_eyebrow" class="text-xs font-bold uppercase tracking-widest text-brand-accent block">تابعنا</span>
+          <h2 data-i18n="social_h2" class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight text-white">
+            تابع الرحلة.
+          </h2>
+        </div>
+        
+        <a href="https://instagram.com/adamrahman" target="_blank" rel="noopener noreferrer" class="btn-magnetic border border-white/15 hover:border-brand-accent hover:text-brand-accent text-white px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest inline-flex items-center gap-2 transition-all">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          <span data-i18n="social_cta">تابعني على Instagram ←</span>
+        </a>
+      </div>
+
+      <!-- 6 Social Tiles Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        
+        <div class="reveal-init img-zoom-container rounded-xl overflow-hidden relative h-52 group cursor-pointer border border-white/5">
+          <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=600&auto=format&fit=crop" alt="Instagram Post 1" class="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-500" />
+          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors"></div>
+          <span class="absolute bottom-3 right-3 text-[9px] font-extrabold uppercase tracking-widest px-2.5 py-1 bg-black/80 text-brand-accent rounded">تمرين</span>
+        </div>
+
+        <div class="reveal-init reveal-delay-1 img-zoom-container rounded-xl overflow-hidden relative h-52 group cursor-pointer border border-white/5">
+          <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=600&auto=format&fit=crop" alt="Instagram Post 2" class="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-500" />
+          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors"></div>
+          <span class="absolute bottom-3 right-3 text-[9px] font-extrabold uppercase tracking-widest px-2.5 py-1 bg-black/80 text-brand-accent rounded">تغذية</span>
+        </div>
+
+        <div class="reveal-init reveal-delay-2 img-zoom-container rounded-xl overflow-hidden relative h-52 group cursor-pointer border border-white/5">
+          <img src="https://images.unsplash.com/photo-1517836833250-99e2898b1859?q=80&w=600&auto=format&fit=crop" alt="Instagram Post 3" class="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-500" />
+          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors"></div>
+          <span class="absolute bottom-3 right-3 text-[9px] font-extrabold uppercase tracking-widest px-2.5 py-1 bg-black/80 text-brand-accent rounded">عقلية</span>
+        </div>
+
+        <div class="reveal-init reveal-delay-3 img-zoom-container rounded-xl overflow-hidden relative h-52 group cursor-pointer border border-white/5">
+          <img src="https://images.unsplash.com/photo-1507398941214-572c25f4b1dc?q=80&w=600&auto=format&fit=crop" alt="Instagram Post 4" class="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-500" />
+          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors"></div>
+          <span class="absolute bottom-3 right-3 text-[9px] font-extrabold uppercase tracking-widest px-2.5 py-1 bg-black/80 text-brand-accent rounded">نمط حياة</span>
+        </div>
+
+        <div class="reveal-init reveal-delay-4 img-zoom-container rounded-xl overflow-hidden relative h-52 group cursor-pointer border border-white/5">
+          <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=600&auto=format&fit=crop" alt="Instagram Post 5" class="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-500" />
+          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors"></div>
+          <span class="absolute bottom-3 right-3 text-[9px] font-extrabold uppercase tracking-widest px-2.5 py-1 bg-black/80 text-brand-accent rounded">استشفاء</span>
+        </div>
+
+        <div class="reveal-init reveal-delay-4 img-zoom-container rounded-xl overflow-hidden relative h-52 group cursor-pointer border border-white/5">
+          <img src="https://images.unsplash.com/photo-1549476464-37392f717541?q=80&w=600&auto=format&fit=crop" alt="Instagram Post 6" class="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-500" />
+          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors"></div>
+          <span class="absolute bottom-3 right-3 text-[9px] font-extrabold uppercase tracking-widest px-2.5 py-1 bg-black/80 text-brand-accent rounded">أداء</span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- MULTI-STEP CONSULTATION BOOKING WIZARD -->
+  <section id="booking" class="py-24 md:py-32 bg-[#0f0f13] border-t border-white/10 relative">
+    <div class="max-w-4xl mx-auto px-6 md:px-12 space-y-12">
+      
+      <!-- Section Header -->
+      <div class="reveal-init text-center space-y-4">
+        <span data-i18n="book_eyebrow" class="text-xs font-bold uppercase tracking-widest text-brand-accent block">طلب الاستشارة</span>
+        <h2 data-i18n="book_h2" class="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-white">
+          جاهز تبدأ التغيير؟
+        </h2>
+        <p data-i18n="book_sub" class="text-neutral-400 text-sm sm:text-base font-light leading-relaxed max-w-xl mx-auto">
+          احكيلنا أنت فين دلوقتي، وإيه هدفك، وهنحدد إذا كان التدريب مناسب ليك.
+        </p>
+      </div>
+
+      <!-- Multi-Step Card Wrapper -->
+      <div class="reveal-init glass-panel p-6 sm:p-10 rounded-3xl border-white/10 shadow-2xl relative">
+        
+        <!-- Progress Bar Top -->
+        <div class="mb-8 space-y-2">
+          <div class="flex items-center justify-between text-xs font-bold uppercase tracking-widest text-neutral-400">
+            <span>استمارة الاستشارة المباشرة</span>
+            <span id="wizard-step-indicator" class="text-brand-accent">الخطوة 01 من 03</span>
+          </div>
+          <div class="w-full h-1.5 bg-neutral-900 rounded-full overflow-hidden">
+            <div id="wizard-progress-bar" class="h-full bg-brand-accent transition-all duration-500 w-1/3"></div>
+          </div>
+        </div>
+
+        <input type="hidden" id="selected-goal" value="" />
+        <input type="hidden" id="selected-consultation" value="مكالمة تعارف وتحديد هدف — 20 دقيقة" />
+
+        <!-- STEP 1: SELECT GOAL -->
+        <div id="wizard-step-1" class="wizard-step active space-y-6">
+          <div class="space-y-1">
+            <h3 data-i18n="book_step1_t" class="font-display font-bold text-xl text-white">الخطوة 1: اختار هدفك الرئيسي</h3>
+            <p data-i18n="book_step1_d" class="text-xs text-neutral-400">اختر النتيجة التي تريد تحقيقها بأعلى درجة من التزامك.</p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="option-card goal-option-card p-6 rounded-2xl border border-white/10 space-y-2 group" data-value="خسارة الدهون ونحت الجسم">
+              <div class="flex items-center justify-between">
+                <span data-i18n="book_g1_t" class="font-display font-bold text-base text-white group-hover:text-brand-accent transition-colors">خسارة الدهون</span>
+                <span class="text-brand-accent font-bold">🔥</span>
+              </div>
+              <p data-i18n="book_g1_d" class="text-xs text-neutral-400 font-light">خسارة الدهون ونحت الجسم مع الحفاظ على العضلات.</p>
+            </div>
+
+            <div class="option-card goal-option-card p-6 rounded-2xl border border-white/10 space-y-2 group" data-value="بناء العضلات والضخامة">
+              <div class="flex items-center justify-between">
+                <span data-i18n="book_g2_t" class="font-display font-bold text-base text-white group-hover:text-brand-accent transition-colors">بناء العضلات</span>
+                <span class="text-brand-accent font-bold">⚡</span>
+              </div>
+              <p data-i18n="book_g2_d" class="text-xs text-neutral-400 font-light">زيادة الكتلة العضلية والقوة بشكل متناسق.</p>
+            </div>
+
+            <div class="option-card goal-option-card p-6 rounded-2xl border border-white/10 space-y-2 group" data-value="تحسين الأداء واللياقة">
+              <div class="flex items-center justify-between">
+                <span data-i18n="book_g3_t" class="font-display font-bold text-base text-white group-hover:text-brand-accent transition-colors">تحسين الأداء</span>
+                <span class="text-brand-accent font-bold">🏆</span>
+              </div>
+              <p data-i18n="book_g3_d" class="text-xs text-neutral-400 font-light">زيادة اللياقة، النشاط، الطاقة والمرونة.</p>
+            </div>
+
+            <div class="option-card goal-option-card p-6 rounded-2xl border border-white/10 space-y-2 group" data-value="تغيير نمط الحياة">
+              <div class="flex items-center justify-between">
+                <span data-i18n="book_g4_t" class="font-display font-bold text-base text-white group-hover:text-brand-accent transition-colors">تغيير نمط الحياة</span>
+                <span class="text-brand-accent font-bold">🔄</span>
+              </div>
+              <p data-i18n="book_g4_d" class="text-xs text-neutral-400 font-light">إعادة تشكيل الجسم وعادات يومية تناسب عملك.</p>
+            </div>
+          </div>
+
+          <div class="flex justify-end pt-4">
+            <button id="wizard-next-1" class="btn-magnetic btn-accent px-8 py-3.5 rounded-full text-xs font-extrabold uppercase tracking-widest flex items-center gap-2">
+              <span>الانتقال لنوع الاستشارة</span>
+              <svg class="w-4 h-4 flip-on-rtl" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 2: SELECT CONSULTATION TYPE -->
+        <div id="wizard-step-2" class="wizard-step space-y-6">
+          <div class="space-y-1">
+            <h3 data-i18n="book_step2_t" class="font-display font-bold text-xl text-white">الخطوة 2: نوع الاستشارة</h3>
+            <p data-i18n="book_step2_d" class="text-xs text-neutral-400">اختر تفضيلك لمكالمة الاستشارة المباشرة.</p>
+          </div>
+
+          <div class="grid grid-cols-1 gap-4">
+            <div class="option-card consultation-option-card selected p-6 rounded-2xl border border-brand-accent space-y-2 flex items-center justify-between" data-value="مكالمة تعارف وتحديد هدف — 20 دقيقة">
+              <div class="space-y-1">
+                <span data-i18n="book_c1_t" class="font-display font-bold text-lg text-white">مكالمة تعارف وتحديد هدف — 20 دقيقة</span>
+                <p data-i18n="book_c1_d" class="text-xs text-neutral-400 font-light">مكالمة تقييم أداء مباشرة مع المدرب آدم رحمن لمراجعة وضعك الحالي.</p>
+              </div>
+              <span class="px-3 py-1 bg-brand-accent text-black text-[10px] font-extrabold uppercase tracking-wider rounded-full">استشارة مجانية</span>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between pt-4">
+            <button id="wizard-prev-2" class="px-6 py-3 border border-white/10 hover:border-white/30 text-white rounded-full text-xs font-bold uppercase tracking-widest">
+              السابق
+            </button>
+            <button id="wizard-next-2" class="btn-magnetic btn-accent px-8 py-3.5 rounded-full text-xs font-extrabold uppercase tracking-widest flex items-center gap-2">
+              <span>إدخال البيانات</span>
+              <svg class="w-4 h-4 flip-on-rtl" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 3: CONTACT FORM DETAILS -->
+        <div id="wizard-step-3" class="wizard-step space-y-6">
+          <div class="space-y-1">
+            <h3 data-i18n="book_step3_t" class="font-display font-bold text-xl text-white">الخطوة 3: بياناتك الشخصية</h3>
+            <p data-i18n="book_step3_d" class="text-xs text-neutral-400">يرجى ملء بياناتك حتى نتمكن من مراجعة طلبك قبل المكالمة.</p>
+          </div>
+
+          <form id="booking-form" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="space-y-1.5">
+                <label for="client-name" data-i18n="book_lbl_name" class="text-[10px] font-bold uppercase tracking-widest text-neutral-400">الاسم بالكامل *</label>
+                <input type="text" id="client-name" required placeholder="مثال: أحمد حسن" class="w-full bg-neutral-900/80 border border-white/10 focus:border-brand-accent rounded-xl px-4 py-3 text-sm text-white placeholder-neutral-600 focus:outline-none transition-colors" />
+              </div>
+
+              <div class="space-y-1.5">
+                <label for="client-email" data-i18n="book_lbl_email" class="text-[10px] font-bold uppercase tracking-widest text-neutral-400">البريد الإلكتروني *</label>
+                <input type="email" id="client-email" required placeholder="name@domain.com" class="w-full bg-neutral-900/80 border border-white/10 focus:border-brand-accent rounded-xl px-4 py-3 text-sm text-white placeholder-neutral-600 focus:outline-none transition-colors" />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="space-y-1.5">
+                <label for="client-phone" data-i18n="book_lbl_phone" class="text-[10px] font-bold uppercase tracking-widest text-neutral-400">رقم الواتساب *</label>
+                <input type="tel" id="client-phone" required placeholder="+20 100 000 0000" class="w-full bg-neutral-900/80 border border-white/10 focus:border-brand-accent rounded-xl px-4 py-3 text-sm text-white placeholder-neutral-600 focus:outline-none transition-colors" />
+              </div>
+
+              <div class="space-y-1.5">
+                <label for="client-level" data-i18n="book_lbl_level" class="text-[10px] font-bold uppercase tracking-widest text-neutral-400">مستوى الخبرة في التمرين</label>
+                <select id="client-level" class="w-full bg-neutral-900/80 border border-white/10 focus:border-brand-accent rounded-xl px-4 py-3 text-sm text-white focus:outline-none transition-colors">
+                  <option value="مبتدئ (0-1 سنة)">مبتدئ (0-1 سنة)</option>
+                  <option value="متوسط (1-3 سنوات)" selected>متوسط (1-3 سنوات)</option>
+                  <option value="متقدم (+3 سنوات)">متقدم (+3 سنوات)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="space-y-1.5">
+              <label for="client-notes" data-i18n="book_lbl_notes" class="text-[10px] font-bold uppercase tracking-widest text-neutral-400">إيه أكتر تحدي بيواجهك حالياً؟</label>
+              <textarea id="client-notes" rows="3" placeholder="مثال: عدم الانتظام في الوقت، ضغط العمل، صعوبة الالتزام بالدايت..." class="w-full bg-neutral-900/80 border border-white/10 focus:border-brand-accent rounded-xl px-4 py-3 text-sm text-white placeholder-neutral-600 focus:outline-none transition-colors resize-none"></textarea>
+            </div>
+
+            <div class="flex items-center justify-between pt-4 border-t border-white/10">
+              <button type="button" id="wizard-prev-3" class="px-6 py-3 border border-white/10 hover:border-white/30 text-white rounded-full text-xs font-bold uppercase tracking-widest">
+                السابق
+              </button>
+              <button type="submit" id="submit-booking-btn" class="btn-magnetic btn-accent px-8 py-3.5 rounded-full text-xs font-extrabold uppercase tracking-widest flex items-center gap-2">
+                <span data-i18n="book_btn_submit">اطلب استشارتك</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- STEP SUCCESS STATE -->
+        <div id="wizard-step-success" class="wizard-step text-center space-y-6 py-8">
+          <div class="w-16 h-16 rounded-full bg-brand-accent/20 border border-brand-accent text-brand-accent flex items-center justify-center mx-auto">
+            <svg class="w-8 h-8 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+          </div>
+
+          <div class="space-y-2">
+            <span class="text-xs font-bold uppercase tracking-widest text-brand-accent">تأكيد الاستلام</span>
+            <h3 data-i18n="book_succ_h3" class="font-display font-extrabold text-3xl text-white">تم استلام طلبك.</h3>
+            <p data-i18n="book_succ_p" class="text-neutral-300 text-sm max-w-md mx-auto font-light">
+              شكرًا لك، <span id="summary-name" class="font-bold text-white">المتقدم</span>. سنراجع بياناتك ونتواصل معك قريبًا.
+            </p>
+          </div>
+
+          <div class="glass-panel p-6 rounded-2xl border-white/10 max-w-md mx-auto text-right space-y-3 text-xs">
+            <div class="flex justify-between border-b border-white/5 pb-2">
+              <span class="text-neutral-400">رقم الواتساب:</span>
+              <span id="summary-phone" class="font-bold text-white">+20 100 000 0000</span>
+            </div>
+            <div class="flex justify-between border-b border-white/5 pb-2">
+              <span class="text-neutral-400">نوع الاستشارة:</span>
+              <span class="font-bold text-white">مكالمة تعارف — 20 دقيقة</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-neutral-400">وقت التواصل المتوقع:</span>
+              <span class="font-bold text-brand-accent">خلال 12 ساعة</span>
+            </div>
+          </div>
+
+          <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="#" class="whatsapp-trigger btn-magnetic px-8 py-3 bg-[#25D366] hover:bg-[#20ba5a] text-black font-extrabold text-xs uppercase tracking-widest rounded-full flex items-center gap-2">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.157 4.228 4.298-1.127z"/></svg>
+              <span data-i18n="book_succ_wa">تسريع التواصل عبر الواتساب</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- FAQ ACCORDION SECTION -->
+  <section id="faq" class="py-24 md:py-32 bg-[#070709] border-t border-white/10 relative">
+    <div class="max-w-4xl mx-auto px-6 md:px-12 space-y-12">
+      
+      <!-- Section Title -->
+      <div class="reveal-init text-center space-y-4">
+        <span data-i18n="faq_eyebrow" class="text-xs font-bold uppercase tracking-widest text-brand-accent block">الأسئلة الشائعة</span>
+        <h2 data-i18n="faq_h2" class="font-display font-extrabold text-4xl sm:text-5xl tracking-tight text-white">
+          الأسئلة الشائعة
+        </h2>
+      </div>
+
+      <!-- Accordion Items -->
+      <div class="reveal-init space-y-4">
+        
+        <!-- FAQ Item 1 -->
+        <div class="faq-item glass-panel rounded-2xl border border-white/10 transition-colors">
+          <button class="faq-header w-full p-6 text-right flex items-center justify-between focus:outline-none">
+            <span class="font-display font-bold text-base md:text-lg text-white">لمن هذا البرنامج التدريبي؟</span>
+            <span class="faq-icon text-xl text-neutral-400 font-bold transition-transform duration-300">+</span>
+          </button>
+          <div class="faq-content px-6 pb-6 text-xs sm:text-sm text-neutral-400 font-light leading-relaxed">
+            البرنامج مصمم للأشخاص الملتزمين، رجال الأعمال، التنفيذيين، وكل من يريد بناء جسم قوي وأداء عالي بطريقة علمية. هذا البرنامج ليس لمن يبحث عن حلول سريعة وهمية أو رجيم تجويع غير صحي.
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="faq-item glass-panel rounded-2xl border border-white/10 transition-colors">
+          <button class="faq-header w-full p-6 text-right flex items-center justify-between focus:outline-none">
+            <span class="font-display font-bold text-base md:text-lg text-white">هل أحتاج الذهاب إلى جيم تجاري؟</span>
+            <i class="faq-icon text-xl text-neutral-400 font-bold transition-transform duration-300">+</i>
+          </button>
+          <div class="faq-content px-6 pb-6 text-xs sm:text-sm text-neutral-400 font-light leading-relaxed">
+            التمرين في الجيم يوفر أفضل وأسرع النتائج لبناء العضلات والقوة. ولكن إذا كنت تسافر كثيراً أو تعتمد على جيم منزلي بمعدات بسيطة، فنحن نبني لك برنامج مخصص تماماً حسب الأدوات المتاحة لديك.
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="faq-item glass-panel rounded-2xl border border-white/10 transition-colors">
+          <button class="faq-header w-full p-6 text-right flex items-center justify-between focus:outline-none">
+            <span class="font-display font-bold text-base md:text-lg text-white">هل توفر خطة تغذية مخصصة؟</span>
+            <i class="faq-icon text-xl text-neutral-400 font-bold transition-transform duration-300">+</i>
+          </button>
+          <div class="faq-content px-6 pb-6 text-xs sm:text-sm text-neutral-400 font-light leading-relaxed">
+            نعم. كل استراتيجية تغذية تتبني حسب معدل حرقك اليومي، ماكروز جسمك، تفضيلاتك في الأكل، وتأقلم مع مواعيد عملك والخروج للمطاعم. بدون حرمان أو جداول أكل قاسية.
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="faq-item glass-panel rounded-2xl border border-white/10 transition-colors">
+          <button class="faq-header w-full p-6 text-right flex items-center justify-between focus:outline-none">
+            <span class="font-display font-bold text-base md:text-lg text-white">كم مرة يتم التقييم والمتابعة؟</span>
+            <i class="faq-icon text-xl text-neutral-400 font-bold transition-transform duration-300">+</i>
+          </button>
+          <div class="faq-content px-6 pb-6 text-xs sm:text-sm text-neutral-400 font-light leading-relaxed">
+            بنعمل تقييم أسبوعي شامل كل 7 أيام بنراجع فيه قياسات الجسم، التطور على الميزان، فيديوهات التكنيك، مستوى النوم، والإجهاد، وبنعدل التغذية والتمرين فوراً حسب النتائج.
+          </div>
+        </div>
+
+        <!-- FAQ Item 5 -->
+        <div class="faq-item glass-panel rounded-2xl border border-white/10 transition-colors">
+          <button class="faq-header w-full p-6 text-right flex items-center justify-between focus:outline-none">
+            <span class="font-display font-bold text-base md:text-lg text-white">كيف يعمل التدريب أونلاين عالمياً؟</span>
+            <i class="faq-icon text-xl text-neutral-400 font-bold transition-transform duration-300">+</i>
+          </button>
+          <div class="faq-content px-6 pb-6 text-xs sm:text-sm text-neutral-400 font-light leading-relaxed">
+            التدريب أونلاين بيمشي بسلاسة كاملة عن طريق تطبيق متابعة مخصص، تصوير فيديوهات التمرين للتقييم، وتواصل مباشر عبر الواتساب. بتحصل على نفس المستوى العالي من المتابعة سواء كنت في القاهرة، دبي، لندن، أو نيويورك.
+          </div>
+        </div>
+
+        <!-- FAQ Item 6 -->
+        <div class="faq-item glass-panel rounded-2xl border border-white/10 transition-colors">
+          <button class="faq-header w-full p-6 text-right flex items-center justify-between focus:outline-none">
+            <span class="font-display font-bold text-base md:text-lg text-white">ماذا يحدث فور تقديم الطلب؟</span>
+            <i class="faq-icon text-xl text-neutral-400 font-bold transition-transform duration-300">+</i>
+          </button>
+          <div class="faq-content px-6 pb-6 text-xs sm:text-sm text-neutral-400 font-light leading-relaxed">
+            بمجرد تقديم طلبك، بفحص بياناتك وأهدافك خلال 12 ساعة. وإذا كنت مؤهلاً للبرنامج، بنحدد معاك موعد مكالمة التعارف 20 دقيقة لوضع خطة التحول كاملة.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- FINAL MASSIVE CTA CAMPAIGN SECTION -->
+  <section class="py-32 md:py-44 bg-[#070709] relative overflow-hidden border-t border-white/10">
+    
+    <!-- Hero Background Graphic -->
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1600&auto=format&fit=crop" 
+        alt="Adam Rahman Final Campaign Background" 
+        class="w-full h-full object-cover object-center opacity-25 filter grayscale contrast-150 brightness-75"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-[#070709] via-[#070709]/80 to-[#070709]"></div>
+      <div class="absolute inset-0 bg-radial-gradient"></div>
+    </div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-6 text-center space-y-8">
+      
+      <span data-i18n="final_eyebrow" class="reveal-init text-xs font-extrabold uppercase tracking-widest text-brand-accent block">الوقت حان</span>
+
+      <h2 class="reveal-init reveal-delay-1 font-display font-extrabold text-5xl sm:text-7xl lg:text-8xl tracking-tightest leading-[1.05] text-white">
+        <span data-i18n="final_h2_1">رحلتك نحو نسخة أقوى منك</span><br />
+        <span data-i18n="final_h2_2" class="text-brand-accent">تبدأ هنا.</span>
+      </h2>
+
+      <p data-i18n="final_sub" class="reveal-init reveal-delay-2 text-base sm:text-xl text-neutral-300 font-light max-w-2xl mx-auto">
+        توقف عن تأجيل إمكانياتك البدنية. ابني الجسم والعقلية والانضباط الذي يرفع من مستوى حياتك كلها.
+      </p>
+
+      <div class="reveal-init reveal-delay-3 pt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#booking" class="btn-magnetic btn-accent px-10 py-5 rounded-full text-sm font-extrabold uppercase tracking-widest flex items-center gap-3 shadow-[0_0_50px_rgba(212,255,0,0.3)]">
+          <span data-i18n="final_cta_primary">ابدأ رحلتك</span>
+          <svg class="w-5 h-5 flip-on-rtl" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+        </a>
+        <a href="#" class="whatsapp-trigger btn-magnetic px-8 py-5 border border-white/20 hover:border-brand-accent text-white hover:text-brand-accent rounded-full text-sm font-bold uppercase tracking-widest flex items-center gap-2">
+          <svg class="w-5 h-5 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.157 4.228 4.298-1.127z"/></svg>
+          <span data-i18n="final_cta_secondary">تحدث عبر الواتساب</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="py-16 bg-[#070709] border-t border-white/10 text-neutral-400 text-xs">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 space-y-12">
+      
+      <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 pb-12 border-b border-white/10">
+        
+        <!-- Brand Info -->
+        <div class="space-y-2">
+          <span class="font-display font-extrabold text-2xl text-white tracking-tight block">آدم رحمن</span>
+          <p data-i18n="footer_tagline" class="text-neutral-500 max-w-md text-xs font-light">
+            تدريب أونلاين للأداء والتحول البدني. أنظمة مخصصة علمية لنتائج مستدامة.
+          </p>
+        </div>
+
+        <!-- Footer Nav -->
+        <div class="flex flex-wrap gap-6 sm:gap-8 font-semibold uppercase tracking-wider text-[11px] text-neutral-300">
+          <a href="#about" data-i18n="nav_about" class="hover:text-brand-accent transition-colors">عن آدم</a>
+          <a href="#programs" data-i18n="nav_coaching" class="hover:text-brand-accent transition-colors">البرامج</a>
+          <a href="#results" data-i18n="nav_results" class="hover:text-brand-accent transition-colors">النتائج</a>
+          <a href="#method" data-i18n="nav_method" class="hover:text-brand-accent transition-colors">المنهج</a>
+          <a href="#testimonials" data-i18n="nav_testimonials" class="hover:text-brand-accent transition-colors">آراء العملاء</a>
+          <a href="#faq" data-i18n="faq_h2" class="hover:text-brand-accent transition-colors">الأسئلة الشائعة</a>
+        </div>
+
+        <!-- Pure SVG Social Media Icons Row -->
+        <div class="flex items-center gap-3">
+          <!-- Instagram SVG -->
+          <a href="https://instagram.com/adamrahman" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-neutral-300 hover:border-brand-accent hover:text-brand-accent transition-all" aria-label="Instagram">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+
+          <!-- YouTube SVG -->
+          <a href="https://youtube.com/@adamrahman" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-neutral-300 hover:border-brand-accent hover:text-brand-accent transition-all" aria-label="YouTube">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+
+          <!-- TikTok SVG -->
+          <a href="https://tiktok.com/@adamrahman" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-neutral-300 hover:border-brand-accent hover:text-brand-accent transition-all" aria-label="TikTok">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.98-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.82.56-1.36 1.48-1.46 2.47-.14 1.25.35 2.55 1.3 3.33 1.01.83 2.45.98 3.59.39 1.05-.53 1.72-1.65 1.76-2.83.04-3.59.02-7.18.03-10.77z"/></svg>
+          </a>
+
+          <!-- Facebook SVG -->
+          <a href="https://facebook.com/adamrahman" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-neutral-300 hover:border-brand-accent hover:text-brand-accent transition-all" aria-label="Facebook">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+
+          <!-- WhatsApp SVG -->
+          <a href="#" class="whatsapp-trigger w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-neutral-300 hover:border-[#25D366] hover:text-[#25D366] transition-all" aria-label="WhatsApp">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.157 4.228 4.298-1.127z"/></svg>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Bottom Copyright & Creator Credit -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-neutral-500">
+        <p data-i18n="footer_copy">© 2026 آدم رحمن. جميع الحقوق محفوظة.</p>
+        
+        <!-- Subtle Creator Credit -->
+        <div class="flex items-center gap-2 text-neutral-500 font-medium">
+          <span>Created by <strong class="text-neutral-300 font-bold">Ahmed Samir</strong></span>
+          <span class="w-1 h-1 rounded-full bg-brand-accent"></span>
+          <a href="tel:+201013746111" class="hover:text-brand-accent transition-colors font-mono text-[11px]">+20 101 374 6111</a>
+          <span class="w-1 h-1 rounded-full bg-white/20"></span>
+          <a href="https://wa.me/201013746111?text=Hi%20Ahmed,%20I%20saw%20your%20fitness%20coach%20demo%20and%20I'd%20like%20to%20discuss%20a%20website%20for%20my%20personal%20brand." target="_blank" rel="noopener noreferrer" class="hover:text-[#25D366] transition-colors flex items-center gap-1">
+            <span>WhatsApp</span>
+            <svg class="w-3 h-3 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.157 4.228 4.298-1.127z"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- TRANSFORMATION DETAIL MODAL -->
+  <div id="transformation-modal" class="fixed inset-0 bg-black/90 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
+    <div class="glass-panel p-6 sm:p-8 rounded-3xl max-w-2xl w-full border-white/10 relative space-y-6 animate-fadeIn max-h-[90vh] overflow-y-auto">
+      
+      <button id="close-modal-btn" class="absolute top-6 left-6 p-2 text-neutral-400 hover:text-white bg-white/5 rounded-full" aria-label="Close modal">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center">
+        <div class="h-72 rounded-2xl overflow-hidden border border-white/10">
+          <img id="modal-img" src="" alt="Transformation Preview" class="w-full h-full object-cover grayscale contrast-125" />
+        </div>
+        
+        <div class="space-y-4">
+          <span id="modal-goal" class="text-[10px] font-extrabold uppercase tracking-widest px-3 py-1 bg-brand-accent text-black rounded-full inline-block">
+            الهدف
+          </span>
+          <h3 id="modal-name" class="font-display font-extrabold text-3xl text-white">اسم العميل</h3>
+          
+          <div class="space-y-2 text-xs border-y border-white/10 py-3">
+            <div class="flex justify-between">
+              <span class="text-neutral-400">النتيجة المحققة:</span>
+              <span id="modal-result" class="font-bold text-brand-accent">-</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-neutral-400">المدة:</span>
+              <span id="modal-duration" class="font-bold text-white">-</span>
+            </div>
+          </div>
+
+          <p id="modal-quote" class="text-xs text-neutral-300 italic leading-relaxed">
+            "تفاصيل التحول..."
+          </p>
+
+          <a href="#booking" onclick="document.getElementById('transformation-modal').classList.add('hidden');" class="btn-magnetic btn-accent w-full py-3 rounded-xl text-xs font-extrabold uppercase tracking-widest text-center block">
+            قدّم لتحقيق نتائج مماثلة
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- FLOATING WHATSAPP BUTTON (BOTTOM-RIGHT) -->
+  <div class="fixed bottom-6 right-6 z-40 group">
+    <!-- Tooltip -->
+    <div class="absolute bottom-full right-0 mb-3 hidden group-hover:block bg-neutral-900 text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-lg border border-white/10 whitespace-nowrap shadow-xl">
+      تحدث مع آدم
+    </div>
+    
+    <!-- Floating Button with pure WhatsApp SVG -->
+    <a 
+      href="#" 
+      class="whatsapp-trigger w-14 h-14 bg-[#25D366] text-black rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform pulse-ring" 
+      aria-label="Contact Adam Rahman on WhatsApp"
+      data-wa-message="مرحبًا آدم، حابب أعرف أكتر عن برامج التدريب."
+    >
+      <svg class="w-7 h-7 fill-black" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.157 4.228 4.298-1.127z"/></svg>
+    </a>
+  </div>
+
+  <!-- Main Modular JavaScript App -->
+  <script src="app.js"></script>
+</body>
+</html>
