@@ -1,344 +1,358 @@
 /**
- * ADAM RAHMAN / PERFORMANCE COACH
+ * BASSEM SOLIMAN / FOOTBALL PERFORMANCE COACH
  * Bilingual (Arabic / English) Application Logic & Dynamic i18n System
  */
 
 // Translation Dictionary (Arabic Default & English Dual)
 const translations = {
   ar: {
-    nav_logo_sub: "مدرب أداء وتطوير بدني",
+    nav_logo_sub: "أداء وتدريب كرة القدم",
     nav_home: "الرئيسية",
-    nav_about: "عن آدم",
+    nav_about: "عن الكابتن",
     nav_coaching: "البرامج",
-    nav_results: "النتائج",
+    nav_services: "الخدمات",
+    nav_results: "تطور اللاعبين",
     nav_method: "المنهج",
-    nav_testimonials: "آراء العملاء",
-    nav_book: "احجز مكالمتك ←",
+    nav_testimonials: "آراء اللاعبين",
+    nav_book: "احجز تدريبك ←",
     lang_toggle: "EN",
     
-    hero_eyebrow: "تدريب أونلاين • أداء • تغذية",
-    hero_h1_1: "ابني جسمك.",
-    hero_h1_2: "وارتقِ بحياتك.",
-    hero_sub: "تدريب شخصي مصمم حول جسمك، نمط حياتك وأهدافك — مع متابعة حقيقية تساعدك على تحقيق نتائج يمكنك الحفاظ عليها.",
-    hero_cta_primary: "ابدأ رحلتك",
-    hero_cta_secondary: "شاهد النتائج ↓",
-    hero_badge_1_num: "+500 عميل",
-    hero_badge_1_text: "حققوا نتائج حقيقية",
-    hero_badge_2_num: "+12 سنة",
-    hero_badge_2_text: "خبرة تدريبية نخبوية",
-    hero_card_name: "آدم رحمن",
-    hero_card_role: "رئيس مدربي الأداء",
-    hero_card_quote: "أنا مش بدي الناس جدول تمرين وخلاص. أنا ببني لهم نظام يقدروا يعيشوا بيه.",
-    hero_card_slots_label: "اشتراكات أونلاين 1:1",
-    hero_card_slots_count: "متبقي 3 أماكن فقط هذا الشهر",
+    hero_eyebrow: "أداء رياضي • سرعة ورشاقة • إعداد بدني لكرة القدم",
+    hero_h1_1: "تدرب بذكاء. تحرك أسرع.",
+    hero_h1_2: "العب أفضل.",
+    hero_sub: "تدريب متخصص في كرة القدم لتطوير الأداء، السرعة، القوة، والرشاقة وزيادة الثقة والأداء البدني داخل الملعب.",
+    hero_cta_primary: "ابدأ التدريب",
+    hero_cta_secondary: "استكشف البرامج ↓",
+    hero_badge_1_num: "+300 لاعب",
+    hero_badge_1_text: "تم تطوير أداؤهم البدني",
+    hero_badge_2_num: "+10 سنوات",
+    hero_badge_2_text: "خبرة في تدريب لاعبي الكرة",
+    hero_card_name: "باسم سليمان",
+    hero_card_role: "مدرب أداء وتطوير بدني لكرة القدم",
+    hero_card_quote: "تطوير أداء لاعب كرة القدم بيعتمد على تحويل القوة العضلية لسرعة انفجارية وتسارع يفرق في الملعب.",
+    hero_card_slots_label: "اشتراكات التدريب والتطوير",
+    hero_card_slots_count: "متبقي 4 أماكن هذا الشهر",
 
-    stat_1_label: "عميل حقق نتائج",
-    stat_1_sub: "في مصر وحول العالم",
-    stat_2_label: "سنة خبرة",
-    stat_2_sub: "أنظمة علمية مجربة",
-    stat_3_label: "نسبة استمرار العملاء",
-    stat_3_sub: "نتائج وأسلوب حياة مستدام",
-    stat_4_label: "دولة حول العالم",
-    stat_4_sub: "متابعة أونلاين عالمية",
+    stat_1_label: "لاعب تم تطويرهم",
+    stat_1_sub: "في الأكاديميات والأندية",
+    stat_2_label: "سنوات خبرة",
+    stat_2_sub: "أنظمة إعداد بدني متخصصة",
+    stat_3_label: "تحسن السرعة والرشاقة",
+    stat_3_sub: "معدلات تسارع وقتالية أفضل",
+    stat_4_label: "مركز في الملعب",
+    stat_4_sub: "تخصيص متكامل لكل مركز",
 
-    about_eyebrow: "المدرب",
-    about_h2_1: "الموضوع مش مجرد إنك",
-    about_h2_2: "تبان فورمة.",
-    about_p1: "الموضوع إنك تبني جسمًا أقوى، وعادات أفضل، وانضباطًا يغيّر الطريقة التي تعيش بها حياتك. معظم النصائح الفردية بتفشل لأنها بتمشي على فورمة نظري، لكن في الحقيقة انت عندك شغل، سفر، والتزامات عائلية.",
-    about_p2: "على مدار 12 سنة، طوّرت أنظمة تدريب وتغذية مخصصة لرجال الأعمال، التنفيذيين، والأشخاص اللي معندهمش وقت يضيعوه في تجارب عشوائية.",
-    about_quote: "أنا مش بدي الناس جدول تمرين وخلاص. أنا ببني لهم نظام يقدروا يعيشوا بيه.",
-    about_sig: "— آدم رحمن",
-    about_b1: "أنظمة علمية مخصصة",
-    about_b2: "مرونة تتناسب مع نمط حياتك",
-    about_b3: "متابعة شخصية مباشرة 1:1",
-    about_b4: "نتائج مستدامة على المدى البعيد",
+    about_eyebrow: "عن الكابتن",
+    about_h2_1: "كرة القدم الحديثة تتطلب",
+    about_h2_2: "سرعة، قوة، ورشاقة استثنائية.",
+    about_p1: "التدريب التقليدي في الجيم مش دايماً بينعكس على الملعب. لاعب الكرة محتاج سرعة خطوة أولى، قدرة عالية على تغيير الاتجاه، وانفجارية في الالتحامات البدنية بدون التضحية باللياقة طوال الـ 90 دقيقة.",
+    about_p2: "على مدار أكثر من 10 سنوات، قمت بتطوير أنظمة تدريب مخصصة للاعبي كرة القدم بمختلف أعمارهم ومراكزهم، تركز على رفع مستوى الكفاءة الحركية، وقاية اللاعب من الإصابات، وتطوير الجوانب البدنية التي تصنع الفارق في المباريات الحاسمة.",
+    about_quote: "هدفنا مش بس تمرين شاق، هدفنا تمرين ذكي بينعكس فوراً على أدائك وثقتك في أرض الملعب.",
+    about_sig: "— باسم سليمان",
+    about_b1: "بروتوكولات بدنية مخصصة لكرة القدم",
+    about_b2: "تطوير التسارع والسرعة الانفجارية",
+    about_b3: "تقوية العضلات والوقاية من الإصابات",
+    about_b4: "تدريب مخصص حسب مراكز اللاعبين",
 
-    prog_eyebrow: "أنظمة مصممة لك",
-    prog_h2: "تدريب مصمم ليك.",
-    prog_sub: "مفيش خطط جاهزة. كل برنامج بيتبني حسب جسمك، جدولك، أهدافك ومستوى التزامك.",
+    prog_eyebrow: "برامج التدريب والتطوير",
+    prog_h2: "برامج مخصصة لأبطال الملعب.",
+    prog_sub: "كل برنامج يتم تصميمه وتطويره بناءً على احتياجات اللاعب، مركره، ومستواه البدني.",
     prog1_tier: "المستوى 01",
-    prog1_title: "التدريب الشخصي أونلاين",
-    prog1_desc: "للأشخاص الذين يريدون أقصى درجات التخصيص والمتابعة المباشرة لنتائج سريعة ومستدامة.",
-    prog1_b1: "برنامج تمرين مخصص للكتلة والقوة",
-    prog1_b2: "استراتيجية تغذية وحساب ماكروز دقيقة",
-    prog1_b3: "متابعة أسبوعية بالفيديو والتقييم",
-    prog1_b4: "تواصل مباشر مع المدرب عبر الواتساب",
-    prog1_b5: "مراجعة التكنيك والأداء الرياضي",
+    prog1_title: "أداء كرة القدم الشامل",
+    prog1_desc: "تطوير القوة البدنية، السرعة، والتحمل العام ليصبح اللاعب أكثر جاهزية وهيمنة في أرض الملعب.",
+    prog1_b1: "إعداد بدني مخصص لمتطلبات كرة القدم",
+    prog1_b2: "تطوير القوة الانفجارية والالتحامات",
+    prog1_b3: "رفع اللياقة والتحمل لـ 90 دقيقة",
+    prog1_b4: "متابعة أسبوعية وتقييم القياسات البدنية",
+    prog1_b5: "تواصل مباشر وتوجيه مستمر",
     prog1_cta: "قدّم الآن",
     prog2_tier: "المستوى 02",
-    prog2_title: "برنامج التحول",
-    prog2_desc: "برنامج متكامل لمدة 12 أسبوعًا لإعادة تشكيل الجسم وخسارة الدهون مع الحفاظ على الكتلة العضلية.",
-    prog2_b1: "مراحـل تدريبية مقسمة لـ 12 أسبوعًا",
-    prog2_b2: "استراتيجية تغذية ومكملات دقيقة",
-    prog2_b3: "متابعة ومحاسبة أسبوعية دقيقة",
-    prog2_b4: "تحسين الكارديو واللياقة البدنية",
-    prog2_b5: "دخول فوري لمكتبة التحول",
-    prog2_cta: "اعرف المزيد",
+    prog2_title: "السرعة والرشاقة الانفجارية",
+    prog2_desc: "برنامج مكثف مخصص لزيادة السرعة الأولى، تسارع الـ 10 و 30 متر، وسرعة تغيير الاتجاه.",
+    prog2_b1: "تمارين سلم الرشاقة والأقماع التخصصية",
+    prog2_b2: "تطوير ميكانيكية الجري والخطوة الأولى",
+    prog2_b3: "تمارين البلايومتريك للقوة الانفجارية",
+    prog2_b4: "تحسين زمن الاستجابة ورد الفعل",
+    prog2_b5: "تقارير تحسن الأداء والسرعة",
+    prog2_cta: "استكشف البرنامج",
     prog3_tier: "المستوى 03",
-    prog3_title: "التدريب النخبوي",
-    prog3_desc: "لرجال الأعمال والتنفيذيين وكبار الشخصيات الذين يحتاجون متابعة وأولوية تواصل 24/7.",
-    prog3_b1: "بروتوكول كامل مخصص للمقامات والسفر",
-    prog3_b2: "أولوية تواصل 24/7 عبر الواتساب",
-    prog3_b3: "مكالمات أسبوعية لتطوير الأداء والصحة",
-    prog3_b4: "أدلة التغذية في المطاعم والسفر",
-    prog3_b5: "إدارة النوم والتحكم في الإجهاد",
-    prog3_cta: "قدّم على التدريب النخبوي",
+    prog3_title: "القوة والإعداد البدني",
+    prog3_desc: "بناء القوة العضلية الخاصة بلاعبي الكرة مع تقوية الركبة والكاحل لحماية اللاعب من الإصابات.",
+    prog3_b1: "تمارين قوة صممت خصيصاً للاعبي الكرة",
+    prog3_b2: "تقوية العضلات الخلفية والمفاصل",
+    prog3_b3: "برنامج وقاية من إصابات الرباط والصليبي",
+    prog3_b4: "استراتيجيات التغذية والاستشفاء الرياضي",
+    prog3_b5: "دعم ومتابعة أونلاين 1:1",
+    prog3_cta: "انضم للبرنامج",
 
-    res_eyebrow: "النتائج الحقيقية",
-    res_h2: "النتائج هي الدليل.",
+    services_eyebrow: "تخصصات التدريب",
+    services_h2: "الخدمات الرئيسية",
+    services_sub: "حلول تدريب بدني شاملة لتطوير اللاعبين في جميع المراكز.",
+
+    res_eyebrow: "تطور اللاعبين",
+    res_h2: "النتائج تحدث في الملعب.",
     res_filter_all: "الكل",
-    res_filter_fatloss: "خسارة الدهون",
-    res_filter_muscle: "بناء العضلات",
-    res_filter_recomp: "إعادة التشكيل",
+    res_filter_speed: "السرعة والتسارع",
+    res_filter_power: "القوة والالتحام",
+    res_filter_stamina: "اللياقة والبدني",
 
-    case_eyebrow: "قصة نجاح / 01",
-    case_h2: "تحول أحمد خلال 16 أسبوعًا",
-    case_before_lbl: "قبل",
-    case_after_lbl: "بعد",
+    case_eyebrow: "قصة تطوير / 01",
+    case_h2: "تطوير أداء كريم (جناح أيسر)",
+    case_before_lbl: "تسارع 30م قبل",
+    case_after_lbl: "بعد التدريب",
     case_dur_lbl: "المدة",
-    case_desc: "أحمد جرّب أنظمة غذائية مختلفة قبل كده. المشكلة لم تكن في الحماس، ولكن في عدم وجود نظام واضح يمكنه الاستمرار عليه وسط ضغوط عمله كمدير تنفيذي بأكثر من 60 ساعة عمل أسبوعيًا.",
+    case_desc: "كريم كان بيواجه صعوبة في التفوق البدني في الدقائق الأخيرة من المباريات وصعوبة في تغيير الاتجاه المفاجئ. بعد 12 أسبوعًا من التدريب المتخصص في السرعة والرشاقة، تحسن زمن تسارعه بفارق 0.4 ثانية مع زيادة ملحوظة في قوة الالتحامات.",
     case_cta: "اقرأ قصة النجاح ←",
 
     method_eyebrow: "منظومة العمل",
-    method_h2: "المنهج",
-    method_sub: "أربعة مراحل علمية مدروسة لتحقيق تحول بدني مضمون ومستدام.",
-    method_s1_t: "التقييم",
-    method_s1_d: "نفهم جسمك، نمط حياتك وأهدافك.",
-    method_s2_t: "البناء",
-    method_s2_d: "نبني استراتيجية التدريب والتغذية المناسبة لك.",
-    method_s3_t: "التطوير",
-    method_s3_d: "نعدل الخطة بناءً على نتائجك الحقيقية.",
-    method_s4_t: "التطور",
-    method_s4_d: "نبني عادات تستمر معك حتى بعد انتهاء البرنامج.",
+    method_h2: "منهجية التدريب",
+    method_sub: "أربعة مراحل مدروسة لبناء لاعب كرة قدم قوي، أسرع، وأكثر جاهزية.",
+    method_s1_t: "التقييم البدني",
+    method_s1_d: "فحص الحركة، اختبارات السرعة، وتحليل متطلبات مركز اللاعب.",
+    method_s2_t: "تصميم الخطة",
+    method_s2_d: "بناء برنامج مخصص يجمع بين السرعة، الرشاقة، والقوة العضلية.",
+    method_s3_t: "التدريب الميداني",
+    method_s3_d: "تنفيذ الوحدات التدريبية في الملعب والجيم بأعلى درجات التركيز.",
+    method_s4_t: "القياس والتطور",
+    method_s4_d: "متابعة التحسن في المباريات وتطوير الأرقام البدنية باستمرار.",
 
-    test_eyebrow: "آراء العملاء",
-    test_h2: "ناس حقيقية. تغيير حقيقي.",
-    t1_quote: "آدم غيّر تمامًا طريقة تفكيري في التمرين والتغذية. لأول مرة فهمت فعلًا إيه اللي يناسب جسمي من غير ما أضحي بوقتي مع عيلتي.",
-    t1_name: "عمر حسن",
-    t1_role: "رجل أعمال • -14 كجم",
-    t2_quote: "مستوى التفاصيل في المتابعة الأسبوعية مذهل. بيراجع فيديوهات التمرين ويبدل الماكروز حسب مستوى الإجهاد. احترافية حقيقية.",
-    t2_name: "خالد السيد",
-    t2_role: "مدير تنفيذي • +7 كجم عضل",
-    t3_quote: "كطبيب بساعات عمل طويلة، الأنظمة التقليدية مكنتش بتظبط معايا. آدم بنى لي نظام 4 أيام غير تمامًا من لياقتي وجسمي.",
-    t3_name: "د. شريف منصور",
-    t3_role: "جراح عظام • إعادة تشكيل",
+    test_eyebrow: "آراء اللاعبين",
+    test_h2: "ثقة حقيقية.<br />أداء يتكلم.",
+    t1_quote: "أكبر فرق لاحظته بعد التمرين مع كابتن باسم هو زيادة سرعتي في أول خطوة وثقتي الكبيرة في الالتحامات خلال المباريات الرسمية.",
+    t1_name: "زياد طارق",
+    t1_role: "لاعب وسط • تطوير السرعة",
+    t2_quote: "التمرين أثر بشكل مباشر على لياقتي. بقيت أقدر أجري بنفس الكفاءة في الدقيقة 90 بدون هبوط في المستوى البدني.",
+    t2_name: "أحمد حسام",
+    t2_role: "جناح هجومي • أداء بدني",
+    t3_quote: "كولي أمر، شفت تطور ممتاز في التزام ابني وحركته في الملعب. كابتن باسم بيشتغل باحترافية عالية واهتمام بكل التفاصيل.",
+    t3_name: "م. طارق المحمدي",
+    t3_role: "ولي أمر لاعب ناشئ",
 
-    social_eyebrow: "تابعنا",
-    social_h2: "تابع الرحلة.",
-    social_cta: "تابعني على Instagram ←",
+    social_eyebrow: "محتوى التدريب",
+    social_h2: "شاهد التمارين والأداء.",
+    social_cta: "تابعنا على Instagram ←",
 
-    book_eyebrow: "طلب الاستشارة",
-    book_h2: "جاهز تبدأ التغيير؟",
-    book_sub: "احكيلنا أنت فين دلوقتي، وإيه هدفك، وهنحدد إذا كان التدريب مناسب ليك.",
+    book_eyebrow: "حجز جلسة تدريب",
+    book_h2: "جاهز ترتقي بمستواك؟",
+    book_sub: "اختر هدفك ورسالتك وسنقوم بالتواصل معك لتحديد موعد الاختبار وتقييم الأداء البدني.",
     book_step1_t: "الخطوة 1: اختار هدفك الرئيسي",
-    book_step1_d: "اختر النتيجة التي تريد تحقيقها بأعلى درجة من التزامك.",
-    book_g1_t: "خسارة الدهون",
-    book_g1_d: "خسارة الدهون ونحت الجسم مع الحفاظ على العضلات.",
-    book_g2_t: "بناء العضلات",
-    book_g2_d: "زيادة الكتلة العضلية والقوة بشكل متناسق.",
-    book_g3_t: "تحسين الأداء",
-    book_g3_d: "زيادة اللياقة، النشاط، الطاقة والمرونة.",
-    book_g4_t: "تغيير نمط الحياة",
-    book_g4_d: "إعادة تشكيل الجسم وعادات يومية تناسب عملك.",
-    book_step2_t: "الخطوة 2: نوع الاستشارة",
-    book_step2_d: "اختر تفضيلك لمكالمة الاستشارة المباشرة.",
-    book_c1_t: "مكالمة تعارف وتحديد هدف — 20 دقيقة",
-    book_c1_d: "مكالمة تقييم أداء مباشرة مع المدرب آدم رحمن لمراجعة وضعك الحالي.",
-    book_step3_t: "الخطوة 3: بياناتك الشخصية",
-    book_step3_d: "يرجى ملء بياناتك حتى نتمكن من مراجعة طلبك قبل المكالمة.",
-    book_lbl_name: "الاسم بالكامل *",
+    book_step1_d: "اختر الجانب البدني الذي تريد تطويره بأعلى أولوية.",
+    book_g1_t: "السرعة والرشاقة",
+    book_g1_d: "زيادة سرعة الانطلاق، التسارع، وسرعة تغيير الاتجاه.",
+    book_g2_t: "القوة والانفجارية",
+    book_g2_d: "زيادة قوة القفز والتسديد والسيطرة في الالتحامات البدنية.",
+    book_g3_t: "اللياقة والبدني 90 دقيقة",
+    book_g3_d: "رفع معدلات الاستمرارية وتحمل المباريات الكثيفة.",
+    book_g4_t: "تطوير أداء مخصص للمركز",
+    book_g4_d: "برنامج متكامل مصمم خصيصاً لمركزك في الملعب.",
+    book_step2_t: "الخطوة 2: نوع التدريب المطلوب",
+    book_step2_d: "اختر نظام التدريب المناسب لك.",
+    book_c1_t: "جلسة تقييم بدني وااختبار سرعة — 30 دقيقة",
+    book_c1_d: "جلسة تقييم ميدانية وتحديد نقاط القوة والاحتياجات البدنية مع كابتن باسم سليمان.",
+    book_step3_t: "الخطوة 3: البيانات الشخصية والمركز",
+    book_step3_d: "يرجى ملء بياناتك لمراجعة طلبك وإعداد ملف التقييم.",
+    book_lbl_name: "اسم اللاعب بالكامل *",
     book_lbl_email: "البريد الإلكتروني *",
-    book_lbl_phone: "رقم الواتساب *",
-    book_lbl_level: "مستوى الخبرة في التمرين",
-    book_lbl_notes: "إيه أكتر تحدي بيواجهك حالياً؟",
-    book_btn_submit: "اطلب استشارتك",
-    book_succ_h3: "تم استلام طلبك.",
-    book_succ_p: "شكرًا لك. سنراجع بياناتك ونتواصل معك قريبًا.",
-    book_succ_wa: "تسريع التواصل عبر الواتساب",
+    book_lbl_phone: "رقم الواتساب للتواصل *",
+    book_lbl_age: "العمر *",
+    book_lbl_position: "المركز في الملعب",
+    book_lbl_level: "المستوى الحالي",
+    book_lbl_notes: "ما هو أكثر جانب ترغب في تطويره حالياً؟",
+    book_btn_submit: "احجز جلسة التقييم",
+    book_succ_h3: "تم استلام طلبك بنجاح!",
+    book_succ_p: "شكراً لك. سنقوم بمراجعة بياناتك والتواصل معك عبر الواتساب خلال ساعات لتأكيد موعد جلسة التقييم.",
+    book_succ_wa: "تواصل مباشر مع كابتن باسم عبر الواتساب",
 
     faq_eyebrow: "الأسئلة الشائعة",
     faq_h2: "الأسئلة الشائعة",
 
-    final_eyebrow: "الوقت حان",
-    final_h2_1: "رحلتك نحو نسخة أقوى منك",
-    final_h2_2: "تبدأ هنا.",
-    final_sub: "توقف عن تأجيل إمكانياتك البدنية. ابني الجسم والعقلية والانضباط الذي يرفع من مستوى حياتك كلها.",
-    final_cta_primary: "ابدأ رحلتك",
+    final_eyebrow: "احجز مكانك في التدريب",
+    final_h2_1: "مستواك القادم في الملعب",
+    final_h2_2: "يبدأ الآن.",
+    final_sub: "توقف عن التردد. طور سرعتك وقوتك البدنية واحصل على الأفضلية التي تجعلك تتألق في كل مباراة.",
+    final_cta_primary: "احجز تدريبك الآن",
     final_cta_secondary: "تحدث عبر الواتساب",
 
-    footer_tagline: "تدريب أونلاين للأداء والتحول البدني.",
-    footer_copy: "© 2026 آدم رحمن. جميع الحقوق محفوظة.",
-    wa_default_msg: "مرحبًا آدم، حابب أعرف أكتر عن برامج التدريب."
+    footer_tagline: "برامج تدريب وإعداد بدني مخصصة للاعبي كرة القدم.",
+    footer_copy: "© 2026 باسم سليمان / مدرب أداء كرة القدم. جميع الحقوق محفوظة.",
+    wa_default_msg: "مرحبًا كابتن باسم، حابب أعرف أكتر عن برامج تدريب وتطوير أداء كرة القدم."
   },
   en: {
-    nav_logo_sub: "Performance Coach",
+    nav_logo_sub: "Football Performance & Training",
     nav_home: "Home",
     nav_about: "About",
-    nav_coaching: "Coaching",
-    nav_results: "Results",
+    nav_coaching: "Programs",
+    nav_services: "Services",
+    nav_results: "Player Progress",
     nav_method: "Method",
     nav_testimonials: "Testimonials",
-    nav_book: "BOOK A CALL →",
+    nav_book: "START TRAINING →",
     lang_toggle: "العربية",
 
-    hero_eyebrow: "ONLINE COACHING / PERFORMANCE / NUTRITION",
-    hero_h1_1: "BUILD THE BODY.",
-    hero_h1_2: "ELEVATE THE LIFE.",
-    hero_sub: "Personalized training, nutrition and accountability for people who are serious about becoming their strongest version.",
-    hero_cta_primary: "START YOUR TRANSFORMATION",
-    hero_cta_secondary: "SEE RESULTS ↓",
-    hero_badge_1_num: "500+ CLIENTS",
-    hero_badge_1_text: "Transformed Worldwide",
-    hero_badge_2_num: "12+ YEARS",
-    hero_badge_2_text: "Elite Coaching Exp.",
-    hero_card_name: "Adam Rahman",
-    hero_card_role: "Head Performance Coach",
-    hero_card_quote: "I don't give people another workout plan. I build systems they can actually live with.",
-    hero_card_slots_label: "Online 1:1 Slots",
-    hero_card_slots_count: "3 Spots Open This Month",
+    hero_eyebrow: "FOOTBALL PERFORMANCE / SPEED & AGILITY / STRENGTH & CONDITIONING",
+    hero_h1_1: "TRAIN SMARTER. MOVE FASTER.",
+    hero_h1_2: "PLAY BETTER.",
+    hero_sub: "Football-focused training built to develop stronger, faster and more confident players on the pitch.",
+    hero_cta_primary: "START TRAINING",
+    hero_cta_secondary: "EXPLORE PROGRAMS ↓",
+    hero_badge_1_num: "300+ PLAYERS",
+    hero_badge_1_text: "Performance Developed",
+    hero_badge_2_num: "10+ YEARS",
+    hero_badge_2_text: "Football Fitness Experience",
+    hero_card_name: "Bassem Soliman",
+    hero_card_role: "Football Performance Coach",
+    hero_card_quote: "Developing a football player comes down to converting strength into explosive pitch speed.",
+    hero_card_slots_label: "Training & Performance Slots",
+    hero_card_slots_count: "4 Spots Open This Month",
 
-    stat_1_label: "CLIENTS TRANSFORMED",
-    stat_1_sub: "Across Egypt & Internationally",
-    stat_2_label: "YEARS COACHING",
-    stat_2_sub: "Proven Science-Based Systems",
-    stat_3_label: "CLIENT RETENTION",
-    stat_3_sub: "Long-term Lifestyle Results",
-    stat_4_label: "COUNTRIES",
-    stat_4_sub: "Global Online Coaching Access",
+    stat_1_label: "PLAYERS DEVELOPED",
+    stat_1_sub: "Across Academies & Clubs",
+    stat_2_label: "YEARS EXPERIENCE",
+    stat_2_sub: "Specialized Football Conditioning",
+    stat_3_label: "SPEED & AGILITY GAINS",
+    stat_3_sub: "Faster Acceleration & Mobility",
+    stat_4_label: "PITCH POSITIONS",
+    stat_4_sub: "Full Position Specialization",
 
     about_eyebrow: "THE COACH",
-    about_h2_1: "THIS ISN'T ABOUT",
-    about_h2_2: "LOOKING FIT.",
-    about_p1: "It's about building a body, mindset and discipline that change the way you show up in every part of your life. Most fitness advice fails because it assumes everyone lives in a vacuum. You have a career, travel schedules, family commitments, and real-world stress.",
-    about_p2: "Over the past 12 years, I've engineered performance frameworks specifically designed for high-performing entrepreneurs, executives, and individuals who don't have time to waste on generic fitness trends.",
-    about_quote: "I don't give people another workout plan. I build systems they can actually live with.",
-    about_sig: "— Adam Rahman",
-    about_b1: "Science-Backed Protocols",
-    about_b2: "Flexible Lifestyle Integration",
-    about_b3: "Direct 1:1 Accountability",
-    about_b4: "Sustainable Physique Architecture",
+    about_h2_1: "MODERN FOOTBALL DEMANDS",
+    about_h2_2: "SPEED, POWER & AGILITY.",
+    about_p1: "Standard gym workouts don't automatically transfer to the pitch. Football players need explosive first-step acceleration, rapid change of direction, and physical duel strength without gassing out over 90 minutes.",
+    about_p2: "For over 10 years, I've developed specialized performance systems tailored for football players across positions and age levels—focusing on movement mechanics, injury prevention, and game-changing physical qualities.",
+    about_quote: "Our goal isn't just working hard—it's training smart so every drill translates directly to match day confidence.",
+    about_sig: "— Bassem Soliman",
+    about_b1: "Football-Specific Science",
+    about_b2: "Acceleration & Explosive Speed",
+    about_b3: "Lower Body Power & Injury Resilience",
+    about_b4: "Position-Specific Skill Integration",
 
-    prog_eyebrow: "TAILORED ARCHITECTURE",
-    prog_h2: "COACHING BUILT AROUND YOU.",
-    prog_sub: "No generic plans. No copy-paste programs. Every client gets a strategy built around their body, schedule and goals.",
+    prog_eyebrow: "TRAINING PROGRAMS",
+    prog_h2: "PROGRAMS BUILT FOR THE PITCH.",
+    prog_sub: "No generic workout routines. Every program is built around the player's position, physical goals, and current fitness level.",
     prog1_tier: "TIER 01",
-    prog1_title: "1:1 PERFORMANCE COACHING",
-    prog1_desc: "Designed for people who demand maximum personalization, structure, and direct coach guidance for high-impact results.",
-    prog1_b1: "Custom Hypertrophy / Strength Program",
-    prog1_b2: "Tailored Macro & Meal Plan Strategy",
-    prog1_b3: "Weekly Video Analysis & Check-ins",
-    prog1_b4: "Direct WhatsApp Coach Access",
-    prog1_b5: "Form Check & Bio-feedback Adjustments",
+    prog1_title: "FOOTBALL PERFORMANCE",
+    prog1_desc: "Develop overall speed, strength, movement mechanics, and physical resilience to dominate every match.",
+    prog1_b1: "Football-Specific Physical Conditioning",
+    prog1_b2: "Explosive Duel & Contact Strength",
+    prog1_b3: "90-Minute Match Stamina & Aerobic Base",
+    prog1_b4: "Weekly Performance Metrics & Testing",
+    prog1_b5: "Direct Coach Feedback & Support",
     prog1_cta: "APPLY NOW",
     prog2_tier: "TIER 02",
-    prog2_title: "TRANSFORMATION PROGRAM",
-    prog2_desc: "A structured 12-week body re-engineering system focused on aggressive fat loss and lean muscle preservation.",
-    prog2_b1: "12-Week Structured Training Phases",
-    prog2_b2: "Precision Nutrition & Supplementation",
-    prog2_b3: "Weekly Accountability Metrics",
-    prog2_b4: "Cardio & Metabolic Conditioning",
-    prog2_b5: "Private Transformation Vault Access",
+    prog2_title: "SPEED & AGILITY",
+    prog2_desc: "Intensive training focused on first-step acceleration, 10m/30m sprint mechanics, and sharp change of direction.",
+    prog2_b1: "Agility Ladder & Cone Reaction Drills",
+    prog2_b2: "Sprint Kinematics & First-Step Drive",
+    prog2_b3: "Plyometric Explosiveness Protocols",
+    prog2_b4: "Reaction Time & Cognitive Speed",
+    prog2_b5: "Speed Gains Tracking Reports",
     prog2_cta: "VIEW PROGRAM",
     prog3_tier: "TIER 03",
-    prog3_title: "ELITE COACHING",
-    prog3_desc: "For C-suite executives, high-performing founders, and athletes who require 24/7 priority access and lifestyle optimization.",
-    prog3_b1: "Full Bespoke Strategy & Travel Protocols",
-    prog3_b2: "Priority 24/7 WhatsApp Communication",
-    prog3_b3: "Weekly Strategy Calls & Bio-hacking",
-    prog3_b4: "Restaurant & Dining Out Guidelines",
-    prog3_b5: "Sleep, HRV & Recovery Management",
-    prog3_cta: "APPLY FOR ELITE",
+    prog3_title: "STRENGTH & CONDITIONING",
+    prog3_desc: "Build football-specific muscular power while strengthening knees and ankles for ultimate injury prevention.",
+    prog3_b1: "Soccer-Tailored Hypertrophy & Power",
+    prog3_b2: "Posterior Chain & Joint Fortification",
+    prog3_b3: "ACL & Hamstring Protection Protocol",
+    prog3_b4: "Sports Nutrition & Recovery Guidelines",
+    prog3_b5: "1:1 Online & Field Performance Access",
+    prog3_cta: "JOIN PROGRAM",
 
-    res_eyebrow: "REAL RESULTS",
-    res_h2: "THE PROOF IS IN THE WORK.",
+    services_eyebrow: "COACHING SERVICES",
+    services_h2: "CORE SERVICES",
+    services_sub: "Comprehensive physical development solutions for football players of all levels.",
+
+    res_eyebrow: "PLAYER PROGRESS",
+    res_h2: "THE PROOF IS ON THE PITCH.",
     res_filter_all: "All",
-    res_filter_fatloss: "Fat Loss",
-    res_filter_muscle: "Muscle Gain",
-    res_filter_recomp: "Recomposition",
+    res_filter_speed: "Speed & Acceleration",
+    res_filter_power: "Strength & Power",
+    res_filter_stamina: "Match Stamina",
 
-    case_eyebrow: "FEATURED CASE STUDY / 01",
-    case_h2: "AHMED'S 16-WEEK TRANSFORMATION",
-    case_before_lbl: "BEFORE",
-    case_after_lbl: "AFTER",
-    case_dur_lbl: "DURATION",
-    case_desc: "Ahmed had tried multiple diets before hiring Adam. The problem wasn't motivation — it was the lack of a system he could sustain alongside 60-hour work weeks as a corporate director in Cairo.",
+    case_eyebrow: "FEATURED PROGRESS / 01",
+    case_h2: "KARIM'S PROGRESS (LEFT WINGER)",
+    case_before_lbl: "30m Sprint Before",
+    case_after_lbl: "After Training",
+    case_dur_lbl: "Duration",
+    case_desc: "Karim struggled with late-game fatigue and rapid directional changes against aggressive defenders. After 12 weeks of targeted speed & agility work, he chopped 0.4s off his sprint time while increasing physical duel win rate.",
     case_cta: "READ CASE STUDY →",
 
-    method_eyebrow: "THE SYSTEM",
-    method_h2: "THE METHOD",
-    method_sub: "A four-stage performance framework designed for predictable, sustainable physical transformation.",
+    method_eyebrow: "THE PROCESS",
+    method_h2: "TRAINING METHODOLOGY",
+    method_sub: "A structured four-stage framework designed to build faster, stronger, and more resilient football players.",
     method_s1_t: "ASSESS",
-    method_s1_d: "Understand your body composition, metabolic baseline, travel commitments, and current lifestyle habits.",
+    method_s1_d: "Evaluate movement baseline, speed testing, and position requirements.",
     method_s2_t: "BUILD",
-    method_s2_d: "Create your personalized training structure, macronutrient distribution, and weekly habit targets.",
-    method_s3_t: "ADAPT",
-    method_s3_d: "Adjust the plan based on real-world bio-feedback, bio-metrics, and strength progression.",
-    method_s4_t: "EVOLVE",
-    method_s4_d: "Automate sustainable routines that protect your physique and energy levels long past the program.",
+    method_s2_d: "Construct a custom performance plan integrating speed, agility, and strength.",
+    method_s3_t: "TRAIN",
+    method_s3_d: "Execute pitch and gym sessions with precision and high energy.",
+    method_s4_t: "PROGRESS",
+    method_s4_d: "Track match performance improvements and continuously adapt training.",
 
-    test_eyebrow: "SOCIAL PROOF",
-    test_h2: "REAL PEOPLE. REAL CHANGE.",
-    t1_quote: "Adam completely changed the way I approach training. For the first time, I actually understand what works for my body without sacrificing family time.",
-    t1_name: "Omar Hassan",
-    t1_role: "Entrepreneur • -14 KG Loss",
-    t2_quote: "The level of detail in the weekly check-ins is incredible. He spot-checks video form and adjusts macros based on stress levels. Pure professional.",
-    t2_name: "Khaled El-Sayed",
-    t2_role: "Managing Director • +7 KG Muscle",
-    t3_quote: "As a doctor with long shift hours, standard routines never worked. Adam built a 4-day split that transformed my stamina and physique.",
-    t3_name: "Dr. Sherif Mansour",
-    t3_role: "Orthopedic Surgeon • Recomp",
+    test_eyebrow: "TESTIMONIALS",
+    test_h2: "REAL PLAYERS.<br />REAL PERFORMANCE.",
+    t1_quote: "The biggest difference was how much faster my first step became and how confident I felt physically during 1v1 duels in official matches.",
+    t1_name: "Ziad Tarek",
+    t1_role: "Midfielder • Speed Development",
+    t2_quote: "The training helped me become faster and much more comfortable changing direction at top speed. I still sprint hard in the 90th minute.",
+    t2_name: "Ahmed Hossam",
+    t2_role: "Winger • Pitch Conditioning",
+    t3_quote: "As a parent, seeing my son's physical evolution and field confidence under Coach Bassem has been outstanding. Pure professionalism.",
+    t3_name: "Eng. Tarek El-Mohamady",
+    t3_role: "Youth Player Parent",
 
-    social_eyebrow: "SOCIAL FEED",
-    social_h2: "FOLLOW THE JOURNEY.",
+    social_eyebrow: "TRAINING FEED",
+    social_h2: "WATCH THE DRILLS.",
     social_cta: "FOLLOW ON INSTAGRAM →",
 
-    book_eyebrow: "APPLICATION PROCESS",
-    book_h2: "READY TO CHANGE WHAT'S POSSIBLE?",
-    book_sub: "Tell me where you are now, where you want to go, and we'll determine whether coaching is the right fit.",
-    book_step1_t: "Step 1: Select Your Primary Goal",
-    book_step1_d: "Choose the outcome you are most committed to achieving.",
-    book_g1_t: "Fat Loss",
-    book_g1_d: "Aggressive bodyfat reduction while maintaining lean muscle mass.",
-    book_g2_t: "Muscle Gain",
-    book_g2_d: "Structured strength and hypertrophic muscle growth protocols.",
-    book_g3_t: "Performance",
-    book_g3_d: "Stamina, mobility, energy optimization, and power output.",
-    book_g4_t: "Lifestyle Recomp",
-    book_g4_d: "Complete habit engineering tailored around demanding work life.",
-    book_step2_t: "Step 2: Consultation Format",
-    book_step2_d: "Select your preferred 1:1 strategy alignment option.",
-    book_c1_t: "20-Minute Discovery Strategy Call",
-    book_c1_d: "Direct phone or Zoom assessment call with Adam Rahman to review your current setup.",
-    book_step3_t: "Step 3: Your Information",
-    book_step3_d: "Provide your details so our team can review your application before calling.",
-    book_lbl_name: "Full Name *",
+    book_eyebrow: "BOOK A SESSION",
+    book_h2: "READY TO ELEVATE YOUR GAME?",
+    book_sub: "Tell us your goals and position, and we will schedule your physical assessment session with Coach Bassem.",
+    book_step1_t: "Step 1: Select Your Primary Focus",
+    book_step1_d: "Choose the physical quality you are most committed to developing.",
+    book_g1_t: "Speed & Agility",
+    book_g1_d: "Improve acceleration, first step drive, and sharp directional changes.",
+    book_g2_t: "Strength & Power",
+    book_g2_d: "Build explosive jumping, shooting power, and duel dominance.",
+    book_g3_t: "90-Minute Match Stamina",
+    book_g3_d: "Elevate high-intensity endurance and repeatable sprint ability.",
+    book_g4_t: "Position Development",
+    book_g4_d: "Full physical program customized for your specific pitch position.",
+    book_step2_t: "Step 2: Training Format",
+    book_step2_d: "Select your preferred coaching option.",
+    book_c1_t: "30-Min Field Physical Assessment",
+    book_c1_d: "Direct speed & movement evaluation session with Coach Bassem Soliman.",
+    book_step3_t: "Step 3: Player Details",
+    book_step3_d: "Please fill out your details so we can review your application.",
+    book_lbl_name: "Full Player Name *",
     book_lbl_email: "Email Address *",
     book_lbl_phone: "WhatsApp Number *",
-    book_lbl_level: "Training Experience",
-    book_lbl_notes: "What is your single biggest struggle right now?",
-    book_btn_submit: "REQUEST MY CONSULTATION",
-    book_succ_h3: "APPLICATION RECEIVED.",
-    book_succ_p: "Thank you. We have logged your application and will contact you shortly.",
-    book_succ_wa: "ACCELERATE VIA WHATSAPP",
+    book_lbl_age: "Age *",
+    book_lbl_position: "Pitch Position",
+    book_lbl_level: "Current Level",
+    book_lbl_notes: "What is your main physical challenge right now?",
+    book_btn_submit: "BOOK ASSESSMENT SESSION",
+    book_succ_h3: "APPLICATION RECEIVED!",
+    book_succ_p: "Thank you. We have logged your application and will contact you via WhatsApp within hours to confirm your assessment date.",
+    book_succ_wa: "CONNECT DIRECTLY ON WHATSAPP",
 
-    faq_eyebrow: "CLARITY",
+    faq_eyebrow: "FAQ",
     faq_h2: "FREQUENTLY ASKED QUESTIONS",
 
-    final_eyebrow: "YOUR TIME IS NOW",
-    final_h2_1: "YOUR NEXT LEVEL",
+    final_eyebrow: "RESERVE YOUR SPOT",
+    final_h2_1: "YOUR NEXT PITCH LEVEL",
     final_h2_2: "STARTS HERE.",
-    final_sub: "Stop postponing your physical potential. Build the body, mindset, and discipline that elevate everything else.",
-    final_cta_primary: "START YOUR TRANSFORMATION",
+    final_sub: "Stop hesitating. Develop the speed, power, and physical edge that make you stand out in every match.",
+    final_cta_primary: "BOOK YOUR SESSION NOW",
     final_cta_secondary: "TALK ON WHATSAPP",
 
-    footer_tagline: "Elite Online Fitness & Performance Coaching.",
-    footer_copy: "© 2026 ADAM RAHMAN / PERFORMANCE COACH. All rights reserved.",
-    wa_default_msg: "Hi Adam, I'd like to learn more about your coaching programs."
+    footer_tagline: "Specialized Football Performance & Conditioning Coaching.",
+    footer_copy: "© 2026 BASSEM SOLIMAN / FOOTBALL PERFORMANCE COACH. All rights reserved.",
+    wa_default_msg: "Hi Coach Bassem, I'd like to learn more about your Football Performance training programs."
   }
 };
 
 // Global Current Language State (Default: Arabic)
-let currentLang = localStorage.getItem('adam_fit_lang') || 'ar';
+let currentLang = localStorage.getItem('bassem_foot_lang') || 'ar';
 
 document.addEventListener('DOMContentLoaded', () => {
   // Apply initial language state
@@ -363,7 +377,7 @@ document.addEventListener('DOMContentLoaded', () => {
    ========================================================================== */
 function applyLanguage(lang) {
   currentLang = lang;
-  localStorage.setItem('adam_fit_lang', lang);
+  localStorage.setItem('bassem_foot_lang', lang);
 
   const isAr = lang === 'ar';
   document.documentElement.lang = lang;
@@ -549,7 +563,7 @@ function initStatCounters() {
 }
 
 /* ==========================================================================
-   TRANSFORMATIONS FILTER
+   TRANSFORMATIONS / PLAYER PROGRESS FILTER
    ========================================================================== */
 function initTransformationFilter() {
   const filterBtns = document.querySelectorAll('.transform-filter-btn');
@@ -560,11 +574,11 @@ function initTransformationFilter() {
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       filterBtns.forEach(b => {
-        b.classList.remove('bg-accent', 'text-black', 'font-bold');
+        b.classList.remove('bg-brand-accent', 'text-black', 'font-bold');
         b.classList.add('bg-neutral-900', 'text-neutral-400', 'border-neutral-800');
       });
 
-      btn.classList.add('bg-accent', 'text-black', 'font-bold');
+      btn.classList.add('bg-brand-accent', 'text-black', 'font-bold');
       btn.classList.remove('bg-neutral-900', 'text-neutral-400', 'border-neutral-800');
 
       const filter = btn.getAttribute('data-filter');
@@ -590,7 +604,7 @@ function initTransformationFilter() {
 }
 
 /* ==========================================================================
-   TRANSFORMATION DETAIL MODAL
+   PLAYER PROGRESS DETAIL MODAL
    ========================================================================== */
 function initTransformationModal() {
   const modal = document.getElementById('transformation-modal');
@@ -643,7 +657,7 @@ function initTransformationModal() {
 }
 
 /* ==========================================================================
-   MULTI-STEP BOOKING CONSULTATION ENGINE
+   MULTI-STEP FOOTBALL BOOKING WIZARD
    ========================================================================== */
 function initBookingWizard() {
   let currentStep = 1;
@@ -683,7 +697,7 @@ function initBookingWizard() {
   if (nextBtn1) {
     nextBtn1.addEventListener('click', () => {
       if (!selectedGoalInput.value) {
-        showToast(currentLang === 'ar' ? 'يرجى اختيار هدفك الرئيسي أولاً.' : 'Please select your primary transformation goal.');
+        showToast(currentLang === 'ar' ? 'يرجى اختيار هدفك الرئيسي أولاً.' : 'Please select your primary performance goal.');
         return;
       }
       goToStep(2);
@@ -695,7 +709,7 @@ function initBookingWizard() {
   if (nextBtn2) {
     nextBtn2.addEventListener('click', () => {
       if (!selectedConsultationInput.value) {
-        showToast(currentLang === 'ar' ? 'يرجى اختيار نوع الاستشارة.' : 'Please select your consultation preference.');
+        showToast(currentLang === 'ar' ? 'يرجى اختيار نوع التدريب.' : 'Please select your training preference.');
         return;
       }
       goToStep(3);
@@ -711,6 +725,8 @@ function initBookingWizard() {
       const name = document.getElementById('client-name').value.trim();
       const email = document.getElementById('client-email').value.trim();
       const phone = document.getElementById('client-phone').value.trim();
+      const age = document.getElementById('client-age') ? document.getElementById('client-age').value.trim() : '';
+      const position = document.getElementById('client-position') ? document.getElementById('client-position').value : '';
 
       if (!name || !email || !phone) {
         showToast(currentLang === 'ar' ? 'يرجى ملء جميع الحقول المطلوبة.' : 'Please fill in all required fields.');
@@ -719,7 +735,7 @@ function initBookingWizard() {
 
       const submitBtn = document.getElementById('submit-booking-btn');
       submitBtn.disabled = true;
-      submitBtn.innerHTML = currentLang === 'ar' ? 'جاري إرسال الطلب...' : 'Submitting Application...';
+      submitBtn.innerHTML = currentLang === 'ar' ? 'جاري تسجيل البيانات...' : 'Submitting Details...';
 
       setTimeout(() => {
         document.querySelectorAll('.wizard-step').forEach(step => step.classList.remove('active'));
@@ -727,8 +743,19 @@ function initBookingWizard() {
         successStep.classList.add('active');
 
         document.getElementById('summary-name').textContent = name;
-        document.getElementById('summary-goal').textContent = selectedGoalInput.value;
+        if (document.getElementById('summary-goal')) {
+          document.getElementById('summary-goal').textContent = selectedGoalInput.value;
+        }
         document.getElementById('summary-phone').textContent = phone;
+
+        // Custom prefilled WhatsApp message for success button
+        const waSuccessBtn = document.querySelector('#wizard-step-success .whatsapp-trigger');
+        if (waSuccessBtn) {
+          const msg = currentLang === 'ar'
+            ? `مرحبًا كابتن باسم، أنا ${name} (مركز: ${position || 'لاعب'}، العمر: ${age || '-'}). قدمت طلب لحجز جلسة التقييم البدني (${selectedGoalInput.value})، وحابب نتأكد من الموعد.`
+            : `Hi Coach Bassem, I am ${name} (Position: ${position || 'Player'}, Age: ${age || '-'}). I just submitted my physical assessment request (${selectedGoalInput.value}) and would like to confirm the schedule.`;
+          waSuccessBtn.setAttribute('data-wa-message', msg);
+        }
 
         document.getElementById('wizard-progress-bar').style.width = '100%';
         document.getElementById('wizard-step-indicator').textContent = currentLang === 'ar' ? 'مكتمل' : 'Completed';
@@ -805,12 +832,12 @@ function initSmoothScrollLinks() {
    ========================================================================== */
 function initWhatsAppCTAs() {
   const waButtons = document.querySelectorAll('.whatsapp-trigger');
-  const whatsappNumber = '201000000000'; // Target coach phone number
+  const whatsappNumber = '201000000000'; // Target coach WhatsApp line
 
   waButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      const defaultMsg = translations[currentLang]?.wa_default_msg || "Hi Adam, I'd like to learn more about your coaching programs.";
+      const defaultMsg = translations[currentLang]?.wa_default_msg || "Hi Coach Bassem, I'd like to learn more about your Football Performance training programs.";
       const customMessage = btn.getAttribute('data-wa-message') || defaultMsg;
       const encodedMsg = encodeURIComponent(customMessage);
       const url = `https://wa.me/${whatsappNumber}?text=${encodedMsg}`;
@@ -827,11 +854,11 @@ function showToast(message) {
   if (!toast) {
     toast = document.createElement('div');
     toast.id = 'toast-notification';
-    toast.className = 'fixed bottom-8 left-1/2 -translate-x-1/2 bg-neutral-900 text-white border border-accent/40 px-6 py-3 rounded-full text-xs uppercase tracking-widest font-bold shadow-2xl z-50 transition-all duration-300 transform translate-y-12 opacity-0 flex items-center gap-2';
+    toast.className = 'fixed bottom-8 left-1/2 -translate-x-1/2 bg-neutral-900 text-white border border-brand-accent/40 px-6 py-3 rounded-full text-xs uppercase tracking-widest font-bold shadow-2xl z-50 transition-all duration-300 transform translate-y-12 opacity-0 flex items-center gap-2';
     document.body.appendChild(toast);
   }
 
-  toast.innerHTML = `<span class="w-2 h-2 rounded-full bg-accent animate-ping"></span> ${message}`;
+  toast.innerHTML = `<span class="w-2 h-2 rounded-full bg-brand-accent animate-ping"></span> ${message}`;
   toast.classList.remove('translate-y-12', 'opacity-0');
 
   setTimeout(() => {
